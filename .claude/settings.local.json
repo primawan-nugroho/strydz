@@ -7,7 +7,13 @@
       "Bash(npm install *)",
       "Bash(node scripts/generate-sample-data.mjs)",
       "Bash(rm -rf .next)",
-      "Bash(npx next *)"
+      "Bash(npx next *)",
+      "Bash(npm run *)",
+      "Bash(./node_modules/.bin/next build *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(git check-ignore *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
