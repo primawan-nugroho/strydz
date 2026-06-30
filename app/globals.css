@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f6f3;
+  --surface-1: #ffffff;
+  --surface-2: #f0eee8;
+  --text-primary: #1c1b19;
+  --text-secondary: #6b6862;
+  --text-muted: #97948c;
+  --border: #e4e1d8;
+  --accent: #d85a30;
+  --accent-bg: #faece7;
+  --accent-text: #993c1d;
+  --success-text: #3b6d11;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-bg: var(--accent-bg);
+  --color-accent-text: var(--accent-text);
+  --color-success-text: var(--success-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #15140f;
+    --surface-1: #1f1e18;
+    --surface-2: #262420;
+    --text-primary: #f1efe8;
+    --text-secondary: #b4b2a9;
+    --text-muted: #888780;
+    --border: #34322c;
+    --accent: #f0997b;
+    --accent-bg: #4a1b0c;
+    --accent-text: #f0997b;
+    --success-text: #97c459;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}

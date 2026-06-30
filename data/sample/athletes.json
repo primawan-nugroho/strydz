@@ -1,0 +1,12 @@
+[
+  {
+    "id": "athlete-premium",
+    "name": "Primawan (Premium)",
+    "isPremium": true
+  },
+  {
+    "id": "athlete-free",
+    "name": "Primawan (Free)",
+    "isPremium": false
+  }
+]
