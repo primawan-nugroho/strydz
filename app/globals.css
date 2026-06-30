@@ -12,6 +12,15 @@
   --accent-bg: #faece7;
   --accent-text: #993c1d;
   --success-text: #3b6d11;
+  --success-bg: #eaf3de;
+  --warning-text: #854f0b;
+  --warning-bg: #faeeda;
+  --warning-fill: #ef9f27;
+  --danger-text: #a32d2d;
+  --danger-bg: #fcebeb;
+  --danger-fill: #e24b4a;
+  --success-fill: #639922;
+  --muted-fill: #b4b2a9;
 }
 
 @theme inline {
@@ -26,10 +35,16 @@
   --color-accent-bg: var(--accent-bg);
   --color-accent-text: var(--accent-text);
   --color-success-text: var(--success-text);
+  --color-success-bg: var(--success-bg);
+  --color-warning-text: var(--warning-text);
+  --color-warning-bg: var(--warning-bg);
+  --color-danger-text: var(--danger-text);
+  --color-danger-bg: var(--danger-bg);
 }
 
+/* Applied when the OS prefers dark and the user hasn't explicitly chosen "light". */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #15140f;
     --surface-1: #1f1e18;
     --surface-2: #262420;
@@ -41,7 +56,40 @@
     --accent-bg: #4a1b0c;
     --accent-text: #f0997b;
     --success-text: #97c459;
+    --success-bg: #1e2d0a;
+    --warning-text: #fac775;
+    --warning-bg: #3a2a0a;
+    --warning-fill: #ef9f27;
+    --danger-text: #f09595;
+    --danger-bg: #3a1414;
+    --danger-fill: #e24b4a;
+    --success-fill: #97c459;
+    --muted-fill: #5f5e5a;
   }
+}
+
+/* Applied when the user explicitly chose "dark" in Settings, regardless of OS preference. */
+:root[data-theme="dark"] {
+  --background: #15140f;
+  --surface-1: #1f1e18;
+  --surface-2: #262420;
+  --text-primary: #f1efe8;
+  --text-secondary: #b4b2a9;
+  --text-muted: #888780;
+  --border: #34322c;
+  --accent: #f0997b;
+  --accent-bg: #4a1b0c;
+  --accent-text: #f0997b;
+  --success-text: #97c459;
+  --success-bg: #1e2d0a;
+  --warning-text: #fac775;
+  --warning-bg: #3a2a0a;
+  --warning-fill: #ef9f27;
+  --danger-text: #f09595;
+  --danger-bg: #3a1414;
+  --danger-fill: #e24b4a;
+  --success-fill: #97c459;
+  --muted-fill: #5f5e5a;
 }
 
 body {

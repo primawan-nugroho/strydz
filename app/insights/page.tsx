@@ -5,12 +5,23 @@ import {
   computeTrainingLoad,
   getFitnessFreshnessTrend,
 } from "@/lib/insights";
+import {
+  describeFitnessLevel,
+  rateAcwr,
+  rateWeeklyLoad,
+} from "@/lib/insights/benchmarks";
 import WeeklyLoadBars from "@/components/WeeklyLoadBars";
 import FreshnessChart from "@/components/FreshnessChart";
 import PremiumBadge from "@/components/PremiumBadge";
+import InfoTooltip from "@/components/InfoTooltip";
+import RatingBadge from "@/components/RatingBadge";
+import RatingScale from "@/components/RatingScale";
 import { Zap, Moon, Flame, Mountain } from "lucide-react";
 
 const suggestionIcon = { rest: Moon, easy: Zap, tempo: Flame, long: Mountain, interval: Flame } as const;
+
+const CHRONIC_INFO =
+  "Chronic load (28d) is your rolling 4-week average weekly training stress — it represents your established fitness baseline. Acute load is judged against it.";
 
 export default async function InsightsPage() {
   const athlete = await getCurrentAthlete();
@@ -19,6 +30,8 @@ export default async function InsightsPage() {
   const load = computeTrainingLoad(activities);
   const nextTraining = computeNextTraining(activities);
   const freshness = getFitnessFreshnessTrend(activities);
+  const acwrRating = rateAcwr(load.acwr);
+  const loadRating = rateWeeklyLoad(load.acuteLoad7d, load.chronicLoad28d);
 
   const SuggestionIcon = suggestionIcon[nextTraining.suggestion];
 
@@ -27,13 +40,28 @@ export default async function InsightsPage() {
       <h1 className="text-[18px] font-medium mb-4">Insights</h1>
 
       <div className="bg-surface-2 rounded-2xl p-4 mb-3">
-        <p className="text-xs text-text-muted mb-1">Fitness level</p>
+        <div className="flex items-center gap-1.5 mb-1">
+          <p className="text-xs text-text-muted">Fitness level</p>
+          <InfoTooltip label="Fitness level" text={describeFitnessLevel(fitness.level)} />
+        </div>
         <p className="text-2xl font-medium mb-1">{fitness.level}</p>
         <p className="text-xs text-text-secondary">
           {fitness.trendPercent >= 0 ? "+" : ""}
           {fitness.trendPercent}% vs last week · ACWR {load.acwr}
         </p>
         <WeeklyLoadBars data={load.weeklyLoad} />
+      </div>
+
+      <div className="bg-surface-2 rounded-2xl p-4 mb-3">
+        <div className="flex items-center justify-between mb-1.5">
+          <div className="flex items-center gap-1.5">
+            <p className="text-[13px] font-medium">ACWR</p>
+            <InfoTooltip label="ACWR" text={acwrRating.description} />
+          </div>
+          <RatingBadge rating={acwrRating} />
+        </div>
+        <p className="text-2xl font-medium">{load.acwr}</p>
+        <RatingScale rating={acwrRating} />
       </div>
 
       <div className="bg-surface-2 rounded-2xl p-4 mb-3 flex items-start gap-3">
@@ -61,11 +89,18 @@ export default async function InsightsPage() {
 
       <div className="grid grid-cols-2 gap-2.5">
         <div className="bg-surface-2 rounded-2xl p-3">
-          <p className="text-xs text-text-muted mb-1">Acute load (7d)</p>
+          <div className="flex items-center gap-1.5 mb-1">
+            <p className="text-xs text-text-muted">Acute load (7d)</p>
+            <InfoTooltip label="Acute load (7d)" text={loadRating.description} />
+          </div>
           <p className="text-lg font-medium">{load.acuteLoad7d}</p>
+          <RatingBadge rating={loadRating} />
         </div>
         <div className="bg-surface-2 rounded-2xl p-3">
-          <p className="text-xs text-text-muted mb-1">Chronic load (28d)</p>
+          <div className="flex items-center gap-1.5 mb-1">
+            <p className="text-xs text-text-muted">Chronic load (28d)</p>
+            <InfoTooltip label="Chronic load (28d)" text={CHRONIC_INFO} />
+          </div>
           <p className="text-lg font-medium">{load.chronicLoad28d}</p>
         </div>
       </div>

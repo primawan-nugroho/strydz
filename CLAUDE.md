@@ -26,10 +26,24 @@ data interface, so no UI code should change when the data source is swapped.
   shape (list of activities + per-activity time-series streams: pace, heart rate, elevation,
   cadence). A `lib/activities/` data-access module exposes `getActivities()` /
   `getActivityDetail(id)` reading from these fixtures.
-- **Phase 2 (live)**: same `lib/activities/` functions get a Strava-backed implementation behind
-  the same signatures, so pages/components are unaffected. Strava tokens stored server-side
-  (httpOnly cookie or session store), never exposed to the client.
-- No database in phase 1. Revisit only if we need to persist tokens/history server-side for phase 2.
+- **Phase 2 (live) — built**: `lib/activities/index.ts` checks for a Strava session cookie; if
+  present it calls `lib/strava/live.ts`, otherwise it falls back to the sample fixtures. Pages
+  never branch on data source. Any live-fetch failure (expired token, missing scope, network)
+  is caught and falls back to sample data rather than breaking the page.
+- **OAuth**: `app/api/strava/{authorize,callback,disconnect,seed}` route handlers. Tokens stored in
+  httpOnly cookies (`lib/strava/session.ts`); `proxy.ts` refreshes the access token ahead of
+  expiry on every request (Route Handlers/Middleware can mutate cookies, Server Components can't —
+  hence the split between `lib/strava/oauth.ts` — pure HTTP, Edge-safe — and `session.ts` — cookie
+  I/O via `next/headers`).
+- **Rate limits**: `lib/strava/cache.ts` is a process-memory TTL cache (60s activity lists, 5min
+  detail/streams) fronting the live calls. Good enough for one dev server; a real deployment needs
+  a shared store (Redis/KV) since this resets per instance/cold start.
+- **Known public-API gap**: Strava's Fitness & Freshness graph and best-power curve are rendered in
+  Strava's own app but are **not exposed by the public REST API for any account tier**. Live mode
+  always returns `null` for `fitnessScore`/`freshnessScore`/`powerCurve`, which correctly resolves
+  through `lib/insights`' computed-fallback path — this is the premium graceful-degradation design
+  doing exactly what it was built for, just triggered by an API gap rather than a free account.
+- No database. Tokens live in cookies only.
 
 ## Insights engine
 
@@ -83,12 +97,14 @@ app/                      Next.js routes (App Router)
   page.tsx                dashboard
   activities/             activity list + [id] detail view
   insights/               insights/stats screen
-  settings/               account / Strava connect (phase 2)
-  api/                    route handlers (Strava OAuth callback, token refresh — phase 2)
-components/               UI components (mobile-first), incl. BottomNav, charts
+  settings/               account / Strava connect + disconnect
+  api/strava/             authorize, callback, disconnect, seed route handlers
+components/               UI components (mobile-first), incl. BottomNav, charts, ActivityMap
 lib/
-  activities/             data-access layer (sample now, Strava later) + types
+  activities/             data-source switch (sample vs. live) + types
   insights/               rule-based analysis engine + types
+  strava/                 OAuth, API client, response→Activity mapping, cache
+proxy.ts                 refreshes near-expiry Strava access tokens before requests render
 data/sample/              demo JSON fixtures (premium + free athlete)
 scripts/                  generate-sample-data.mjs
 ```
@@ -98,32 +114,36 @@ scripts/                  generate-sample-data.mjs
 Ordered roughly by impact. Marked **[demo]** if intended for the sample-data phase, **[live]** if
 it only makes sense once Strava data is connected.
 
-1. **Route map [demo]** — the biggest visible gap; Strava's signature visual.
-   - Data: add `latlng` to `StreamPoint` and a `summaryPolyline` to `Activity`; generate plausible
-     GPS loops in the sample fixtures.
-   - Rendering: react-leaflet + OpenStreetMap tiles (free, no API key). MapLibre GL is the upgrade
-     path. Static route thumbnail on list rows + dashboard; full interactive map on detail page.
-   - Polyline colored by pace or HR (gradient trace) — premium-feeling, pure client-side.
-   - Caveat: Leaflet needs explicit container height and dynamic import (`ssr: false`).
-2. **Map-derived insights [demo]** — auto-detected per-km/mile splits with fastest-split highlight;
+1. ~~**Route map**~~ — done. react-leaflet + OSM detail map with HR gradient trace, plus inline-SVG
+   `RouteThumbnail` (decoded from `summaryPolyline`, no map tiles) on list/dashboard rows.
+2. ~~**Strava OAuth + live data**~~ — done. See Data layer above.
+3. **Map-derived insights [live]** — auto-detected per-km/mile splits with fastest-split highlight;
    elevation profile synced to the map (hover → marker); grade-adjusted pace (GAP) per split.
-3. **PR & trends page [demo]** — best 5k/10k/half, longest run, biggest climb, with trend
-   sparklines. Cheap to compute from existing data, high perceived value.
-4. **Goals & training plan view [demo]** — forward-looking targets (e.g. "sub-50 10k", weekly
-   mileage); gives "next training menu" a place to live as a multi-week plan.
-5. **Activity comparison [demo]** — overlay pace/HR of two runs on the same route/distance; pairs
-   with the premium effort-trend feature.
-6. **UX polish [demo]** — skeleton loading states; empty state for the free athlete with no premium
-   data; activity-type filter tabs (Run/Ride/Swim) on the list; unit toggle (km/mi, pace/speed).
-7. **PWA [demo]** — manifest + installability + pull-to-refresh, so it feels like a native mobile
-   app (matters given the mobile-first goal).
+4. **Chart ↔ map sync + metric toggle [live]** — hover a chart point to move the map marker;
+   toggle the gradient trace between HR and pace. Deferred from the route-map pass.
+5. **PR & trends page [live]** — best 5k/10k/half, longest run, biggest climb, with trend
+   sparklines. Far more meaningful on real history than on ~16 fixture activities.
+6. **Goals & training plan view** — forward-looking targets (e.g. "sub-50 10k", weekly mileage);
+   gives "next training menu" a place to live as a multi-week plan.
+7. **Activity comparison** — overlay pace/HR of two runs on the same route/distance; pairs with the
+   premium effort-trend feature.
+8. **UX polish** — skeleton loading states; activity-type filter tabs on the list; unit toggle
+   (km/mi, pace/speed); pagination/infinite-scroll once activity counts grow past one page.
+9. **PWA** — manifest + installability + pull-to-refresh, so it feels like a native mobile app.
 
-### Architecture notes to decide before Strava integration
+### Architecture notes / open items
 
-- **Rate limits [live]**: Strava API caps (~100 req/15min, 1000/day). Design a cache layer into the
-  data interface now so it slots in cleanly later.
-- **Map data size**: full `latlng` streams are large. Decide whether the data layer returns
-  decimated streams for list thumbnails vs. full resolution for the detail map.
+- **Shared cache store**: `lib/strava/cache.ts` is process-memory only — fine for one dev server,
+  not for multiple serverless instances. Move to Redis/Vercel KV before any real deployment.
+- **Token refresh on Edge**: `proxy.ts` does the refresh-and-persist dance because Server
+  Components can read cookies but not write them. If middleware ever needs more Strava-aware logic,
+  keep new code in `lib/strava/oauth.ts` (no `next/headers`) rather than `session.ts`.
+- **Segment leaderboard rank/total**: the public API's `segment_efforts` gives `pr_rank`/`kom_rank`
+  but not a full leaderboard position out of total athletes — `leaderboardRank`/`leaderboardTotal`
+  are always `null` for live data. Revisit if a future endpoint exposes this.
+- **OAuth scope**: requests `read,activity:read_all`. A token obtained from Strava's own "My API
+  Application" page is often `read`-only and will 401 on `/athlete/activities` — this fails closed
+  into the demo-data fallback rather than crashing, but isn't the same as a real connected account.
 
 ## Conventions
 

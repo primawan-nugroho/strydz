@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { getActivities, getCurrentAthlete } from "@/lib/activities";
-import { Footprints, Bike, Waves, ChevronRight } from "lucide-react";
-
-const typeIcon = { Run: Footprints, Ride: Bike, Swim: Waves } as const;
+import RouteThumbnail from "@/components/RouteThumbnail";
+import { ChevronRight } from "lucide-react";
 
 function formatDistance(meters: number) {
   return `${(meters / 1000).toFixed(1)} km`;
@@ -25,30 +24,27 @@ export default async function ActivitiesPage() {
     <div>
       <h1 className="text-[18px] font-medium mb-4">Activities</h1>
       <div className="flex flex-col gap-2">
-        {activities.map((activity) => {
-          const Icon = typeIcon[activity.type];
-          return (
-            <Link
-              key={activity.id}
-              href={`/activities/${activity.id}`}
-              className="bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
-            >
-              <div className="flex items-center gap-2.5">
-                <div className="w-[34px] h-[34px] rounded-[10px] bg-accent-bg flex items-center justify-center">
-                  <Icon size={17} className="text-accent-text" />
-                </div>
-                <div>
-                  <p className="text-[13px] font-medium">{activity.name}</p>
-                  <p className="text-xs text-text-muted">
-                    {formatDate(activity.startDate)} · {formatDistance(activity.distanceMeters)} ·{" "}
-                    {formatDuration(activity.movingSeconds)}
-                  </p>
-                </div>
+        {activities.map((activity) => (
+          <Link
+            key={activity.id}
+            href={`/activities/${activity.id}`}
+            className="bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
+          >
+            <div className="flex items-center gap-2.5">
+              <div className="w-[34px] h-[34px] rounded-[10px] bg-accent-bg flex items-center justify-center overflow-hidden">
+                <RouteThumbnail polyline={activity.summaryPolyline} />
               </div>
-              <ChevronRight size={16} className="text-text-muted" />
-            </Link>
-          );
-        })}
+              <div>
+                <p className="text-[13px] font-medium">{activity.name}</p>
+                <p className="text-xs text-text-muted">
+                  {formatDate(activity.startDate)} · {formatDistance(activity.distanceMeters)} ·{" "}
+                  {formatDuration(activity.movingSeconds)}
+                </p>
+              </div>
+            </div>
+            <ChevronRight size={16} className="text-text-muted" />
+          </Link>
+        ))}
       </div>
     </div>
   );

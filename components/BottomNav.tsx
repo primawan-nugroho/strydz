@@ -15,7 +15,10 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 mx-auto w-full max-w-md bg-surface-1 border-t border-border flex justify-around py-2 px-2">
+    <nav
+      className="fixed bottom-0 left-0 right-0 mx-auto w-full max-w-md bg-surface-1 border-t border-border flex justify-around px-2 pt-2"
+      style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
+    >
       {items.map(({ href, label, icon: Icon }) => {
         const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
         return (

@@ -4,24 +4,26 @@
     "athleteId": "athlete-premium",
     "name": "Morning tempo run",
     "type": "Run",
-    "startDate": "2026-06-29T08:28:17.909Z",
+    "startDate": "2026-06-29T13:58:50.375Z",
     "distanceMeters": 8200,
     "movingSeconds": 2460,
     "elevationGainMeters": 45,
     "averageHeartrate": 162,
     "averagePace": 5,
     "averageWatts": null,
+    "calories": 469,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 87,
+      "relativeEffort": 92,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-1-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 65,
+          "elapsedSeconds": 72,
           "isPr": false,
-          "leaderboardRank": 180,
+          "leaderboardRank": 188,
           "leaderboardTotal": 1840
         }
       ],
@@ -35,7 +37,11 @@
         "heartrate": 138,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2188,
+          106.814207
+        ]
       },
       {
         "t": 107,
@@ -44,7 +50,11 @@
         "heartrate": 141,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221984,
+          106.813838
+        ]
       },
       {
         "t": 214,
@@ -53,7 +63,11 @@
         "heartrate": 143,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2249,
+          106.815265
+        ]
       },
       {
         "t": 321,
@@ -62,7 +76,11 @@
         "heartrate": 145,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.226766,
+          106.818038
+        ]
       },
       {
         "t": 428,
@@ -71,7 +89,11 @@
         "heartrate": 146,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227847,
+          106.820983
+        ]
       },
       {
         "t": 535,
@@ -80,7 +102,11 @@
         "heartrate": 146,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228959,
+          106.823741
+        ]
       },
       {
         "t": 642,
@@ -89,7 +115,11 @@
         "heartrate": 146,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230032,
+          106.826822
+        ]
       },
       {
         "t": 749,
@@ -98,7 +128,11 @@
         "heartrate": 146,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229997,
+          106.830259
+        ]
       },
       {
         "t": 856,
@@ -107,7 +141,11 @@
         "heartrate": 146,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228258,
+          106.833144
+        ]
       },
       {
         "t": 963,
@@ -116,7 +154,11 @@
         "heartrate": 148,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225533,
+          106.834856
+        ]
       },
       {
         "t": 1070,
@@ -125,7 +167,11 @@
         "heartrate": 150,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22284,
+          106.835953
+        ]
       },
       {
         "t": 1177,
@@ -134,7 +180,11 @@
         "heartrate": 152,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220238,
+          106.837198
+        ]
       },
       {
         "t": 1283,
@@ -143,7 +193,11 @@
         "heartrate": 155,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217237,
+          106.838169
+        ]
       },
       {
         "t": 1390,
@@ -152,7 +206,11 @@
         "heartrate": 158,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214059,
+          106.83768
+        ]
       },
       {
         "t": 1497,
@@ -161,7 +219,11 @@
         "heartrate": 160,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211624,
+          106.83544
+        ]
       },
       {
         "t": 1604,
@@ -170,7 +232,11 @@
         "heartrate": 162,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210251,
+          106.832457
+        ]
       },
       {
         "t": 1711,
@@ -179,7 +245,11 @@
         "heartrate": 162,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.209229,
+          106.82964
+        ]
       },
       {
         "t": 1818,
@@ -188,7 +258,11 @@
         "heartrate": 162,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.208043,
+          106.826787
+        ]
       },
       {
         "t": 1925,
@@ -197,7 +271,11 @@
         "heartrate": 162,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207379,
+          106.82346
+        ]
       },
       {
         "t": 2032,
@@ -206,7 +284,11 @@
         "heartrate": 162,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.208278,
+          106.820165
+        ]
       },
       {
         "t": 2139,
@@ -215,7 +297,11 @@
         "heartrate": 163,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210658,
+          106.817863
+        ]
       },
       {
         "t": 2246,
@@ -224,7 +310,11 @@
         "heartrate": 165,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213448,
+          106.816582
+        ]
       },
       {
         "t": 2353,
@@ -233,7 +323,11 @@
         "heartrate": 167,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.216038,
+          106.815451
+        ]
       },
       {
         "t": 2460,
@@ -242,33 +336,40 @@
         "heartrate": 170,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2188,
+          106.814207
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "nr}d@yc}jSxp@}VjS{u@c[gq@yr@uSuj@tb@}Pfw@|d@~i@"
   },
   {
     "id": "p-act-2",
     "athleteId": "athlete-premium",
     "name": "Easy recovery jog",
     "type": "Run",
-    "startDate": "2026-06-27T08:28:17.914Z",
+    "startDate": "2026-06-27T13:58:50.378Z",
     "distanceMeters": 5000,
     "movingSeconds": 1860,
     "elevationGainMeters": 10,
     "averageHeartrate": 134,
     "averagePace": 6.2,
     "averageWatts": null,
+    "calories": 354,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 58,
+      "relativeEffort": 53,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-2-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 110,
+          "elapsedSeconds": 100,
           "isPr": true,
-          "leaderboardRank": 138,
+          "leaderboardRank": 39,
           "leaderboardTotal": 1840
         }
       ],
@@ -282,7 +383,11 @@
         "heartrate": 114,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2184,
+          106.818809
+        ]
       },
       {
         "t": 81,
@@ -291,7 +396,11 @@
         "heartrate": 116,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220342,
+          106.818584
+        ]
       },
       {
         "t": 162,
@@ -300,7 +409,11 @@
         "heartrate": 118,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22212,
+          106.819454
+        ]
       },
       {
         "t": 243,
@@ -309,7 +422,11 @@
         "heartrate": 120,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223257,
+          106.821145
+        ]
       },
       {
         "t": 323,
@@ -318,7 +435,11 @@
         "heartrate": 121,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223917,
+          106.822941
+        ]
       },
       {
         "t": 404,
@@ -327,7 +448,11 @@
         "heartrate": 121,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224594,
+          106.824623
+        ]
       },
       {
         "t": 485,
@@ -336,7 +461,11 @@
         "heartrate": 121,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225249,
+          106.826501
+        ]
       },
       {
         "t": 566,
@@ -345,7 +474,11 @@
         "heartrate": 121,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225228,
+          106.828597
+        ]
       },
       {
         "t": 647,
@@ -354,7 +487,11 @@
         "heartrate": 121,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224167,
+          106.830356
+        ]
       },
       {
         "t": 728,
@@ -363,7 +500,11 @@
         "heartrate": 122,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222506,
+          106.8314
+        ]
       },
       {
         "t": 809,
@@ -372,7 +513,11 @@
         "heartrate": 124,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220863,
+          106.832069
+        ]
       },
       {
         "t": 890,
@@ -381,7 +526,11 @@
         "heartrate": 126,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219277,
+          106.832828
+        ]
       },
       {
         "t": 970,
@@ -390,7 +539,11 @@
         "heartrate": 129,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217447,
+          106.83342
+        ]
       },
       {
         "t": 1051,
@@ -399,7 +552,11 @@
         "heartrate": 131,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.215509,
+          106.833122
+        ]
       },
       {
         "t": 1132,
@@ -408,7 +565,11 @@
         "heartrate": 133,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214024,
+          106.831756
+        ]
       },
       {
         "t": 1213,
@@ -417,7 +578,11 @@
         "heartrate": 134,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213187,
+          106.829937
+        ]
       },
       {
         "t": 1294,
@@ -426,7 +591,11 @@
         "heartrate": 134,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.212564,
+          106.828219
+        ]
       },
       {
         "t": 1375,
@@ -435,7 +604,11 @@
         "heartrate": 134,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211841,
+          106.82648
+        ]
       },
       {
         "t": 1456,
@@ -444,7 +617,11 @@
         "heartrate": 134,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211436,
+          106.824451
+        ]
       },
       {
         "t": 1537,
@@ -453,7 +630,11 @@
         "heartrate": 134,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211984,
+          106.822442
+        ]
       },
       {
         "t": 1617,
@@ -462,7 +643,11 @@
         "heartrate": 135,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213436,
+          106.821038
+        ]
       },
       {
         "t": 1698,
@@ -471,7 +656,11 @@
         "heartrate": 136,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.215137,
+          106.820258
+        ]
       },
       {
         "t": 1779,
@@ -480,7 +669,11 @@
         "heartrate": 138,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.216716,
+          106.819568
+        ]
       },
       {
         "t": 1860,
@@ -489,33 +682,40 @@
         "heartrate": 141,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2184,
+          106.818809
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "~o}d@q`~jSj]sMlKm`@cPs]s^sKsYvT}Iha@bVdY"
   },
   {
     "id": "p-act-3",
     "athleteId": "athlete-premium",
     "name": "Hill repeats",
     "type": "Run",
-    "startDate": "2026-06-25T08:28:17.914Z",
+    "startDate": "2026-06-25T13:58:50.378Z",
     "distanceMeters": 9600,
     "movingSeconds": 3110,
     "elevationGainMeters": 180,
     "averageHeartrate": 168,
     "averagePace": 5.4,
     "averageWatts": null,
+    "calories": 593,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 96,
+      "relativeEffort": 100,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-3-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 135,
+          "elapsedSeconds": 114,
           "isPr": false,
-          "leaderboardRank": 173,
+          "leaderboardRank": 39,
           "leaderboardTotal": 1840
         }
       ],
@@ -529,7 +729,11 @@
         "heartrate": 143,
         "elevation": 20,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218,
+          106.812194
+        ]
       },
       {
         "t": 135,
@@ -538,7 +742,11 @@
         "heartrate": 146,
         "elevation": 31,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221728,
+          106.811761
+        ]
       },
       {
         "t": 270,
@@ -547,7 +755,11 @@
         "heartrate": 148,
         "elevation": 42,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225142,
+          106.813433
+        ]
       },
       {
         "t": 406,
@@ -556,7 +768,11 @@
         "heartrate": 150,
         "elevation": 51,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227326,
+          106.816679
+        ]
       },
       {
         "t": 541,
@@ -565,7 +781,11 @@
         "heartrate": 151,
         "elevation": 57,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228592,
+          106.820127
+        ]
       },
       {
         "t": 676,
@@ -574,7 +794,11 @@
         "heartrate": 151,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229893,
+          106.823355
+        ]
       },
       {
         "t": 811,
@@ -583,7 +807,11 @@
         "heartrate": 151,
         "elevation": 63,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231149,
+          106.826963
+        ]
       },
       {
         "t": 947,
@@ -592,7 +820,11 @@
         "heartrate": 151,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231109,
+          106.830986
+        ]
       },
       {
         "t": 1082,
@@ -601,7 +833,11 @@
         "heartrate": 152,
         "elevation": 56,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229072,
+          106.834364
+        ]
       },
       {
         "t": 1217,
@@ -610,7 +846,11 @@
         "heartrate": 153,
         "elevation": 49,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225883,
+          106.836368
+        ]
       },
       {
         "t": 1352,
@@ -619,7 +859,11 @@
         "heartrate": 155,
         "elevation": 40,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22273,
+          106.837653
+        ]
       },
       {
         "t": 1487,
@@ -628,7 +872,11 @@
         "heartrate": 158,
         "elevation": 30,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219684,
+          106.839109
+        ]
       },
       {
         "t": 1623,
@@ -637,7 +885,11 @@
         "heartrate": 161,
         "elevation": 20,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.21617,
+          106.840246
+        ]
       },
       {
         "t": 1758,
@@ -646,7 +898,11 @@
         "heartrate": 164,
         "elevation": 10,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.21245,
+          106.839674
+        ]
       },
       {
         "t": 1893,
@@ -655,7 +911,11 @@
         "heartrate": 166,
         "elevation": 1,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.209598,
+          106.837051
+        ]
       },
       {
         "t": 2028,
@@ -664,7 +924,11 @@
         "heartrate": 168,
         "elevation": -6,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207992,
+          106.83356
+        ]
       },
       {
         "t": 2163,
@@ -673,7 +937,11 @@
         "heartrate": 168,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.206795,
+          106.830261
+        ]
       },
       {
         "t": 2299,
@@ -682,7 +950,11 @@
         "heartrate": 168,
         "elevation": -13,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.205406,
+          106.826922
+        ]
       },
       {
         "t": 2434,
@@ -691,7 +963,11 @@
         "heartrate": 168,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.20463,
+          106.823027
+        ]
       },
       {
         "t": 2569,
@@ -700,7 +976,11 @@
         "heartrate": 168,
         "elevation": -7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.205681,
+          106.819169
+        ]
       },
       {
         "t": 2704,
@@ -709,7 +989,11 @@
         "heartrate": 169,
         "elevation": -1,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.208468,
+          106.816474
+        ]
       },
       {
         "t": 2840,
@@ -718,7 +1002,11 @@
         "heartrate": 171,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211735,
+          106.814975
+        ]
       },
       {
         "t": 2975,
@@ -727,7 +1015,11 @@
         "heartrate": 173,
         "elevation": 19,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214766,
+          106.81365
+        ]
       },
       {
         "t": 3110,
@@ -736,33 +1028,40 @@
         "heartrate": 176,
         "elevation": 30,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218,
+          106.812194
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "nm}d@ew|jShy@a[zVg_A}_@yy@u{@gWcr@xh@_Tx`Ajk@hq@"
   },
   {
     "id": "p-act-4",
     "athleteId": "athlete-premium",
     "name": "Sunday long run",
     "type": "Run",
-    "startDate": "2026-06-22T08:28:17.914Z",
+    "startDate": "2026-06-22T13:58:50.379Z",
     "distanceMeters": 18000,
     "movingSeconds": 6048,
     "elevationGainMeters": 90,
     "averageHeartrate": 152,
     "averagePace": 5.6,
     "averageWatts": null,
+    "calories": 1152,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 85,
+      "relativeEffort": 77,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-4-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 120,
+          "elapsedSeconds": 112,
           "isPr": false,
-          "leaderboardRank": 173,
+          "leaderboardRank": 114,
           "leaderboardTotal": 1840
         }
       ],
@@ -776,7 +1075,11 @@
         "heartrate": 129,
         "elevation": 20,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2176,
+          106.800113
+        ]
       },
       {
         "t": 263,
@@ -785,7 +1088,11 @@
         "heartrate": 132,
         "elevation": 31,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22459,
+          106.799302
+        ]
       },
       {
         "t": 526,
@@ -794,7 +1101,11 @@
         "heartrate": 134,
         "elevation": 42,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230991,
+          106.802436
+        ]
       },
       {
         "t": 789,
@@ -803,7 +1114,11 @@
         "heartrate": 136,
         "elevation": 51,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.235087,
+          106.808523
+        ]
       },
       {
         "t": 1052,
@@ -812,7 +1127,11 @@
         "heartrate": 137,
         "elevation": 57,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.237459,
+          106.814988
+        ]
       },
       {
         "t": 1315,
@@ -821,7 +1140,11 @@
         "heartrate": 137,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2399,
+          106.821041
+        ]
       },
       {
         "t": 1578,
@@ -830,7 +1153,11 @@
         "heartrate": 137,
         "elevation": 63,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.242255,
+          106.827805
+        ]
       },
       {
         "t": 1841,
@@ -839,7 +1166,11 @@
         "heartrate": 137,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.242179,
+          106.835348
+        ]
       },
       {
         "t": 2104,
@@ -848,7 +1179,11 @@
         "heartrate": 137,
         "elevation": 56,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.238361,
+          106.841682
+        ]
       },
       {
         "t": 2367,
@@ -857,7 +1192,11 @@
         "heartrate": 138,
         "elevation": 49,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23238,
+          106.845441
+        ]
       },
       {
         "t": 2630,
@@ -866,7 +1205,11 @@
         "heartrate": 140,
         "elevation": 40,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.226468,
+          106.847849
+        ]
       },
       {
         "t": 2893,
@@ -875,7 +1218,11 @@
         "heartrate": 143,
         "elevation": 30,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220757,
+          106.85058
+        ]
       },
       {
         "t": 3155,
@@ -884,7 +1231,11 @@
         "heartrate": 146,
         "elevation": 20,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214169,
+          106.852712
+        ]
       },
       {
         "t": 3418,
@@ -893,7 +1244,11 @@
         "heartrate": 148,
         "elevation": 10,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207193,
+          106.851639
+        ]
       },
       {
         "t": 3681,
@@ -902,7 +1257,11 @@
         "heartrate": 150,
         "elevation": 1,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.201847,
+          106.846721
+        ]
       },
       {
         "t": 3944,
@@ -911,7 +1270,11 @@
         "heartrate": 152,
         "elevation": -6,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.198835,
+          106.840175
+        ]
       },
       {
         "t": 4207,
@@ -920,7 +1283,11 @@
         "heartrate": 152,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.196591,
+          106.83399
+        ]
       },
       {
         "t": 4470,
@@ -929,7 +1296,11 @@
         "heartrate": 152,
         "elevation": -13,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.193987,
+          106.827728
+        ]
       },
       {
         "t": 4733,
@@ -938,7 +1309,11 @@
         "heartrate": 152,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.192531,
+          106.820425
+        ]
       },
       {
         "t": 4996,
@@ -947,7 +1322,11 @@
         "heartrate": 152,
         "elevation": -7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.194502,
+          106.813193
+        ]
       },
       {
         "t": 5259,
@@ -956,7 +1335,11 @@
         "heartrate": 153,
         "elevation": -1,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199728,
+          106.808138
+        ]
       },
       {
         "t": 5522,
@@ -965,7 +1348,11 @@
         "heartrate": 155,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.205852,
+          106.805327
+        ]
       },
       {
         "t": 5785,
@@ -974,7 +1361,11 @@
         "heartrate": 157,
         "elevation": 19,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211537,
+          106.802844
+        ]
       },
       {
         "t": 6048,
@@ -983,33 +1374,40 @@
         "heartrate": 160,
         "elevation": 30,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2176,
+          106.800113
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "~j}d@ukzjShlBqs@vk@qwBu|@emBypBml@{~AhmAkf@lzBfrAj}A"
   },
   {
     "id": "p-act-5",
     "athleteId": "athlete-premium",
     "name": "Threshold ride",
     "type": "Ride",
-    "startDate": "2026-06-20T08:28:17.914Z",
+    "startDate": "2026-06-20T13:58:50.379Z",
     "distanceMeters": 32000,
     "movingSeconds": 4032,
     "elevationGainMeters": 220,
     "averageHeartrate": 158,
     "averagePace": 2.1,
     "averageWatts": 280,
+    "calories": 588,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 87,
+      "relativeEffort": 94,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-5-seg-1",
           "name": "Hilltop climb",
-          "elapsedSeconds": 97,
-          "isPr": true,
-          "leaderboardRank": 137,
+          "elapsedSeconds": 79,
+          "isPr": false,
+          "leaderboardRank": 42,
           "leaderboardTotal": 1840
         }
       ],
@@ -1040,7 +1438,11 @@
         "heartrate": 134,
         "elevation": 20,
         "cadence": 82,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.2172,
+          106.779979
+        ]
       },
       {
         "t": 175,
@@ -1049,7 +1451,11 @@
         "heartrate": 137,
         "elevation": 31,
         "cadence": 84,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.229627,
+          106.778538
+        ]
       },
       {
         "t": 351,
@@ -1058,7 +1464,11 @@
         "heartrate": 140,
         "elevation": 42,
         "cadence": 85,
-        "watts": 199
+        "watts": 199,
+        "latlng": [
+          -6.241005,
+          106.784109
+        ]
       },
       {
         "t": 526,
@@ -1067,7 +1477,11 @@
         "heartrate": 141,
         "elevation": 51,
         "cadence": 84,
-        "watts": 205
+        "watts": 205,
+        "latlng": [
+          -6.248288,
+          106.79493
+        ]
       },
       {
         "t": 701,
@@ -1076,7 +1490,11 @@
         "heartrate": 142,
         "elevation": 57,
         "cadence": 82,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.252506,
+          106.806423
+        ]
       },
       {
         "t": 877,
@@ -1085,7 +1503,11 @@
         "heartrate": 142,
         "elevation": 61,
         "cadence": 80,
-        "watts": 204
+        "watts": 204,
+        "latlng": [
+          -6.256844,
+          106.817184
+        ]
       },
       {
         "t": 1052,
@@ -1094,7 +1516,11 @@
         "heartrate": 142,
         "elevation": 63,
         "cadence": 79,
-        "watts": 198
+        "watts": 198,
+        "latlng": [
+          -6.261031,
+          106.829208
+        ]
       },
       {
         "t": 1227,
@@ -1103,7 +1529,11 @@
         "heartrate": 142,
         "elevation": 61,
         "cadence": 80,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.260896,
+          106.842619
+        ]
       },
       {
         "t": 1402,
@@ -1112,7 +1542,11 @@
         "heartrate": 143,
         "elevation": 56,
         "cadence": 83,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.254108,
+          106.853879
+        ]
       },
       {
         "t": 1578,
@@ -1121,7 +1555,11 @@
         "heartrate": 144,
         "elevation": 49,
         "cadence": 85,
-        "watts": 171
+        "watts": 171,
+        "latlng": [
+          -6.243475,
+          106.860561
+        ]
       },
       {
         "t": 1753,
@@ -1130,7 +1568,11 @@
         "heartrate": 146,
         "elevation": 40,
         "cadence": 85,
-        "watts": 164
+        "watts": 164,
+        "latlng": [
+          -6.232966,
+          106.864842
+        ]
       },
       {
         "t": 1928,
@@ -1139,7 +1581,11 @@
         "heartrate": 149,
         "elevation": 30,
         "cadence": 83,
-        "watts": 160
+        "watts": 160,
+        "latlng": [
+          -6.222813,
+          106.869698
+        ]
       },
       {
         "t": 2104,
@@ -1148,7 +1594,11 @@
         "heartrate": 152,
         "elevation": 20,
         "cadence": 81,
-        "watts": 161
+        "watts": 161,
+        "latlng": [
+          -6.211101,
+          106.873488
+        ]
       },
       {
         "t": 2279,
@@ -1157,7 +1607,11 @@
         "heartrate": 154,
         "elevation": 10,
         "cadence": 79,
-        "watts": 165
+        "watts": 165,
+        "latlng": [
+          -6.198699,
+          106.87158
+        ]
       },
       {
         "t": 2454,
@@ -1166,7 +1620,11 @@
         "heartrate": 156,
         "elevation": 1,
         "cadence": 79,
-        "watts": 173
+        "watts": 173,
+        "latlng": [
+          -6.189195,
+          106.862837
+        ]
       },
       {
         "t": 2630,
@@ -1175,7 +1633,11 @@
         "heartrate": 158,
         "elevation": -6,
         "cadence": 81,
-        "watts": 183
+        "watts": 183,
+        "latlng": [
+          -6.18384,
+          106.8512
+        ]
       },
       {
         "t": 2805,
@@ -1184,7 +1646,11 @@
         "heartrate": 158,
         "elevation": -11,
         "cadence": 84,
-        "watts": 194
+        "watts": 194,
+        "latlng": [
+          -6.179852,
+          106.840204
+        ]
       },
       {
         "t": 2980,
@@ -1193,7 +1659,11 @@
         "heartrate": 158,
         "elevation": -13,
         "cadence": 85,
-        "watts": 203
+        "watts": 203,
+        "latlng": [
+          -6.175221,
+          106.829073
+        ]
       },
       {
         "t": 3155,
@@ -1202,7 +1672,11 @@
         "heartrate": 158,
         "elevation": -11,
         "cadence": 84,
-        "watts": 210
+        "watts": 210,
+        "latlng": [
+          -6.172632,
+          106.816089
+        ]
       },
       {
         "t": 3331,
@@ -1211,7 +1685,11 @@
         "heartrate": 158,
         "elevation": -7,
         "cadence": 82,
-        "watts": 213
+        "watts": 213,
+        "latlng": [
+          -6.176138,
+          106.803231
+        ]
       },
       {
         "t": 3506,
@@ -1220,7 +1698,11 @@
         "heartrate": 159,
         "elevation": -1,
         "cadence": 80,
-        "watts": 212
+        "watts": 212,
+        "latlng": [
+          -6.185428,
+          106.794246
+        ]
       },
       {
         "t": 3681,
@@ -1229,7 +1711,11 @@
         "heartrate": 161,
         "elevation": 8,
         "cadence": 79,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.196315,
+          106.789248
+        ]
       },
       {
         "t": 3857,
@@ -1238,7 +1724,11 @@
         "heartrate": 163,
         "elevation": 19,
         "cadence": 80,
-        "watts": 200
+        "watts": 200,
+        "latlng": [
+          -6.206421,
+          106.784833
+        ]
       },
       {
         "t": 4032,
@@ -1247,33 +1737,40 @@
         "heartrate": 166,
         "elevation": 30,
         "cadence": 82,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.2172,
+          106.779979
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "nh}d@{mvjShaEm|ArnAguEwlB}bEiiEyoAkiDhjCaeAlzE~rCvfD"
   },
   {
     "id": "p-act-6",
     "athleteId": "athlete-premium",
     "name": "Easy spin",
     "type": "Ride",
-    "startDate": "2026-06-18T08:28:17.914Z",
+    "startDate": "2026-06-18T13:58:50.379Z",
     "distanceMeters": 20000,
     "movingSeconds": 3120,
     "elevationGainMeters": 60,
     "averageHeartrate": 128,
     "averagePace": 2.6,
     "averageWatts": 280,
+    "calories": 455,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 61,
+      "relativeEffort": 64,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-6-seg-1",
           "name": "Hilltop climb",
-          "elapsedSeconds": 138,
-          "isPr": false,
-          "leaderboardRank": 93,
+          "elapsedSeconds": 148,
+          "isPr": true,
+          "leaderboardRank": 98,
           "leaderboardTotal": 1840
         }
       ],
@@ -1304,7 +1801,11 @@
         "heartrate": 109,
         "elevation": 5,
         "cadence": 82,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.2168,
+          106.797237
+        ]
       },
       {
         "t": 136,
@@ -1313,7 +1814,11 @@
         "heartrate": 111,
         "elevation": 5,
         "cadence": 84,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.224567,
+          106.796336
+        ]
       },
       {
         "t": 271,
@@ -1322,7 +1827,11 @@
         "heartrate": 113,
         "elevation": 5,
         "cadence": 85,
-        "watts": 199
+        "watts": 199,
+        "latlng": [
+          -6.231678,
+          106.799818
+        ]
       },
       {
         "t": 407,
@@ -1331,7 +1840,11 @@
         "heartrate": 114,
         "elevation": 5,
         "cadence": 84,
-        "watts": 205
+        "watts": 205,
+        "latlng": [
+          -6.23623,
+          106.806581
+        ]
       },
       {
         "t": 543,
@@ -1340,7 +1853,11 @@
         "heartrate": 115,
         "elevation": 6,
         "cadence": 82,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.238866,
+          106.813765
+        ]
       },
       {
         "t": 678,
@@ -1349,7 +1866,11 @@
         "heartrate": 115,
         "elevation": 6,
         "cadence": 80,
-        "watts": 204
+        "watts": 204,
+        "latlng": [
+          -6.241578,
+          106.82049
+        ]
       },
       {
         "t": 814,
@@ -1358,7 +1879,11 @@
         "heartrate": 115,
         "elevation": 6,
         "cadence": 79,
-        "watts": 198
+        "watts": 198,
+        "latlng": [
+          -6.244195,
+          106.828005
+        ]
       },
       {
         "t": 950,
@@ -1367,7 +1892,11 @@
         "heartrate": 115,
         "elevation": 6,
         "cadence": 80,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.24411,
+          106.836387
+        ]
       },
       {
         "t": 1085,
@@ -1376,7 +1905,11 @@
         "heartrate": 116,
         "elevation": 6,
         "cadence": 83,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.239868,
+          106.843425
+        ]
       },
       {
         "t": 1221,
@@ -1385,7 +1918,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 85,
-        "watts": 171
+        "watts": 171,
+        "latlng": [
+          -6.233222,
+          106.847601
+        ]
       },
       {
         "t": 1357,
@@ -1394,7 +1931,11 @@
         "heartrate": 118,
         "elevation": 6,
         "cadence": 85,
-        "watts": 164
+        "watts": 164,
+        "latlng": [
+          -6.226654,
+          106.850276
+        ]
       },
       {
         "t": 1492,
@@ -1403,7 +1944,11 @@
         "heartrate": 120,
         "elevation": 6,
         "cadence": 83,
-        "watts": 160
+        "watts": 160,
+        "latlng": [
+          -6.220308,
+          106.853311
+        ]
       },
       {
         "t": 1628,
@@ -1412,7 +1957,11 @@
         "heartrate": 123,
         "elevation": 7,
         "cadence": 81,
-        "watts": 161
+        "watts": 161,
+        "latlng": [
+          -6.212988,
+          106.85568
+        ]
       },
       {
         "t": 1763,
@@ -1421,7 +1970,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 79,
-        "watts": 165
+        "watts": 165,
+        "latlng": [
+          -6.205237,
+          106.854488
+        ]
       },
       {
         "t": 1899,
@@ -1430,7 +1983,11 @@
         "heartrate": 127,
         "elevation": 7,
         "cadence": 79,
-        "watts": 173
+        "watts": 173,
+        "latlng": [
+          -6.199297,
+          106.849023
+        ]
       },
       {
         "t": 2035,
@@ -1439,7 +1996,11 @@
         "heartrate": 128,
         "elevation": 7,
         "cadence": 81,
-        "watts": 183
+        "watts": 183,
+        "latlng": [
+          -6.19595,
+          106.84175
+        ]
       },
       {
         "t": 2170,
@@ -1448,7 +2009,11 @@
         "heartrate": 128,
         "elevation": 7,
         "cadence": 84,
-        "watts": 194
+        "watts": 194,
+        "latlng": [
+          -6.193457,
+          106.834878
+        ]
       },
       {
         "t": 2306,
@@ -1457,7 +2022,11 @@
         "heartrate": 128,
         "elevation": 7,
         "cadence": 85,
-        "watts": 203
+        "watts": 203,
+        "latlng": [
+          -6.190563,
+          106.827921
+        ]
       },
       {
         "t": 2442,
@@ -1466,7 +2035,11 @@
         "heartrate": 128,
         "elevation": 7,
         "cadence": 84,
-        "watts": 210
+        "watts": 210,
+        "latlng": [
+          -6.188945,
+          106.819806
+        ]
       },
       {
         "t": 2577,
@@ -1475,7 +2048,11 @@
         "heartrate": 128,
         "elevation": 7,
         "cadence": 82,
-        "watts": 213
+        "watts": 213,
+        "latlng": [
+          -6.191136,
+          106.81177
+        ]
       },
       {
         "t": 2713,
@@ -1484,7 +2061,11 @@
         "heartrate": 129,
         "elevation": 8,
         "cadence": 80,
-        "watts": 212
+        "watts": 212,
+        "latlng": [
+          -6.196942,
+          106.806154
+        ]
       },
       {
         "t": 2849,
@@ -1493,7 +2074,11 @@
         "heartrate": 130,
         "elevation": 8,
         "cadence": 79,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.203747,
+          106.80303
+        ]
       },
       {
         "t": 2984,
@@ -1502,7 +2087,11 @@
         "heartrate": 132,
         "elevation": 8,
         "cadence": 80,
-        "watts": 200
+        "watts": 200,
+        "latlng": [
+          -6.210063,
+          106.800271
+        ]
       },
       {
         "t": 3120,
@@ -1511,33 +2100,40 @@
         "heartrate": 134,
         "elevation": 8,
         "cadence": 82,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.2168,
+          106.797237
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "~e}d@wyyjSlxBky@vp@}dCqcAmyBm}Boq@oiB`vAyj@bhCp{AzgB"
   },
   {
     "id": "p-act-7",
     "athleteId": "athlete-premium",
     "name": "Track intervals",
     "type": "Run",
-    "startDate": "2026-06-16T08:28:17.915Z",
+    "startDate": "2026-06-16T13:58:50.379Z",
     "distanceMeters": 7000,
     "movingSeconds": 1974,
     "elevationGainMeters": 5,
     "averageHeartrate": 172,
     "averagePace": 4.7,
     "averageWatts": null,
+    "calories": 376,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 96,
+      "relativeEffort": 101,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-7-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 138,
+          "elapsedSeconds": 99,
           "isPr": false,
-          "leaderboardRank": 65,
+          "leaderboardRank": 162,
           "leaderboardTotal": 1840
         }
       ],
@@ -1551,7 +2147,11 @@
         "heartrate": 146,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2164,
+          106.815933
+        ]
       },
       {
         "t": 86,
@@ -1560,7 +2160,11 @@
         "heartrate": 149,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219118,
+          106.815618
+        ]
       },
       {
         "t": 172,
@@ -1569,7 +2173,11 @@
         "heartrate": 152,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221607,
+          106.816836
+        ]
       },
       {
         "t": 257,
@@ -1578,7 +2186,11 @@
         "heartrate": 154,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2232,
+          106.819203
+        ]
       },
       {
         "t": 343,
@@ -1587,7 +2199,11 @@
         "heartrate": 155,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224123,
+          106.821718
+        ]
       },
       {
         "t": 429,
@@ -1596,7 +2212,11 @@
         "heartrate": 155,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225072,
+          106.824072
+        ]
       },
       {
         "t": 515,
@@ -1605,7 +2225,11 @@
         "heartrate": 155,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225988,
+          106.826702
+        ]
       },
       {
         "t": 601,
@@ -1614,7 +2238,11 @@
         "heartrate": 155,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225959,
+          106.829635
+        ]
       },
       {
         "t": 687,
@@ -1623,7 +2251,11 @@
         "heartrate": 155,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224474,
+          106.832099
+        ]
       },
       {
         "t": 772,
@@ -1632,7 +2264,11 @@
         "heartrate": 157,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222148,
+          106.83356
+        ]
       },
       {
         "t": 858,
@@ -1641,7 +2277,11 @@
         "heartrate": 159,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219849,
+          106.834497
+        ]
       },
       {
         "t": 944,
@@ -1650,7 +2290,11 @@
         "heartrate": 162,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217628,
+          106.835559
+        ]
       },
       {
         "t": 1030,
@@ -1659,7 +2303,11 @@
         "heartrate": 165,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.215066,
+          106.836388
+        ]
       },
       {
         "t": 1116,
@@ -1668,7 +2316,11 @@
         "heartrate": 168,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.212353,
+          106.835971
+        ]
       },
       {
         "t": 1202,
@@ -1677,7 +2329,11 @@
         "heartrate": 170,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210274,
+          106.834058
+        ]
       },
       {
         "t": 1287,
@@ -1686,7 +2342,11 @@
         "heartrate": 172,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.209102,
+          106.831512
+        ]
       },
       {
         "t": 1373,
@@ -1695,7 +2355,11 @@
         "heartrate": 172,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.20823,
+          106.829107
+        ]
       },
       {
         "t": 1459,
@@ -1704,7 +2368,11 @@
         "heartrate": 172,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207217,
+          106.826672
+        ]
       },
       {
         "t": 1545,
@@ -1713,7 +2381,11 @@
         "heartrate": 172,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.206651,
+          106.823832
+        ]
       },
       {
         "t": 1631,
@@ -1722,7 +2394,11 @@
         "heartrate": 172,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207418,
+          106.821019
+        ]
       },
       {
         "t": 1717,
@@ -1731,7 +2407,11 @@
         "heartrate": 173,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.20945,
+          106.819054
+        ]
       },
       {
         "t": 1802,
@@ -1740,7 +2420,11 @@
         "heartrate": 175,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211831,
+          106.817961
+        ]
       },
       {
         "t": 1888,
@@ -1749,7 +2433,11 @@
         "heartrate": 177,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214042,
+          106.816995
+        ]
       },
       {
         "t": 1974,
@@ -1758,33 +2446,40 @@
         "heartrate": 181,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2164,
+          106.815933
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "nc}d@qn}jSni@mSlP{m@_W{i@gk@uPid@n]iN~n@j_@tc@"
   },
   {
     "id": "p-act-8",
     "athleteId": "athlete-premium",
     "name": "Weekday base run",
     "type": "Run",
-    "startDate": "2026-06-14T08:28:17.915Z",
+    "startDate": "2026-06-14T13:58:50.379Z",
     "distanceMeters": 6500,
     "movingSeconds": 2262,
     "elevationGainMeters": 30,
     "averageHeartrate": 145,
     "averagePace": 5.8,
     "averageWatts": null,
+    "calories": 431,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 65,
+      "relativeEffort": 67,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-8-seg-1",
           "name": "Riverside sprint",
-          "elapsedSeconds": 126,
-          "isPr": true,
-          "leaderboardRank": 96,
+          "elapsedSeconds": 116,
+          "isPr": false,
+          "leaderboardRank": 160,
           "leaderboardTotal": 1840
         }
       ],
@@ -1798,7 +2493,11 @@
         "heartrate": 123,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.216,
+          106.817052
+        ]
       },
       {
         "t": 98,
@@ -1807,7 +2506,11 @@
         "heartrate": 126,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218524,
+          106.816759
+        ]
       },
       {
         "t": 197,
@@ -1816,7 +2519,11 @@
         "heartrate": 128,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220835,
+          106.817891
+        ]
       },
       {
         "t": 295,
@@ -1825,7 +2532,11 @@
         "heartrate": 130,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222315,
+          106.820089
+        ]
       },
       {
         "t": 393,
@@ -1834,7 +2545,11 @@
         "heartrate": 130,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223171,
+          106.822423
+        ]
       },
       {
         "t": 492,
@@ -1843,7 +2558,11 @@
         "heartrate": 131,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224053,
+          106.824609
+        ]
       },
       {
         "t": 590,
@@ -1852,7 +2571,11 @@
         "heartrate": 130,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224903,
+          106.827052
+        ]
       },
       {
         "t": 688,
@@ -1861,7 +2584,11 @@
         "heartrate": 130,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224876,
+          106.829776
+        ]
       },
       {
         "t": 787,
@@ -1870,7 +2597,11 @@
         "heartrate": 131,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223497,
+          106.832063
+        ]
       },
       {
         "t": 885,
@@ -1879,7 +2610,11 @@
         "heartrate": 132,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221337,
+          106.83342
+        ]
       },
       {
         "t": 983,
@@ -1888,7 +2623,11 @@
         "heartrate": 134,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219202,
+          106.83429
+        ]
       },
       {
         "t": 1082,
@@ -1897,7 +2636,11 @@
         "heartrate": 136,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.21714,
+          106.835276
+        ]
       },
       {
         "t": 1180,
@@ -1906,7 +2649,11 @@
         "heartrate": 139,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214761,
+          106.836046
+        ]
       },
       {
         "t": 1279,
@@ -1915,7 +2662,11 @@
         "heartrate": 142,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.212242,
+          106.835658
+        ]
       },
       {
         "t": 1377,
@@ -1924,7 +2675,11 @@
         "heartrate": 143,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210311,
+          106.833883
+        ]
       },
       {
         "t": 1475,
@@ -1933,7 +2688,11 @@
         "heartrate": 145,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.209224,
+          106.831519
+        ]
       },
       {
         "t": 1574,
@@ -1942,7 +2701,11 @@
         "heartrate": 145,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.208414,
+          106.829285
+        ]
       },
       {
         "t": 1672,
@@ -1951,7 +2714,11 @@
         "heartrate": 145,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207473,
+          106.827024
+        ]
       },
       {
         "t": 1770,
@@ -1960,7 +2727,11 @@
         "heartrate": 145,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.206947,
+          106.824387
+        ]
       },
       {
         "t": 1869,
@@ -1969,7 +2740,11 @@
         "heartrate": 145,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207659,
+          106.821775
+        ]
       },
       {
         "t": 1967,
@@ -1978,7 +2753,11 @@
         "heartrate": 146,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.209546,
+          106.81995
+        ]
       },
       {
         "t": 2065,
@@ -1987,7 +2766,11 @@
         "heartrate": 147,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.211758,
+          106.818935
+        ]
       },
       {
         "t": 2164,
@@ -1996,7 +2779,11 @@
         "heartrate": 150,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213811,
+          106.818038
+        ]
       },
       {
         "t": 2262,
@@ -2005,33 +2792,40 @@
         "heartrate": 152,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.216,
+          106.817052
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "~`}d@qu}jSlf@_RdOoj@gUyf@ch@mOsa@h[eMpk@`]`a@"
   },
   {
     "id": "p-act-9",
     "athleteId": "athlete-premium",
     "name": "Long ride",
     "type": "Ride",
-    "startDate": "2026-06-11T08:28:17.915Z",
+    "startDate": "2026-06-11T13:58:50.379Z",
     "distanceMeters": 55000,
     "movingSeconds": 7590,
     "elevationGainMeters": 410,
     "averageHeartrate": 150,
     "averagePace": 2.3,
     "averageWatts": 280,
+    "calories": 1107,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 84,
+      "relativeEffort": 86,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-9-seg-1",
           "name": "Hilltop climb",
-          "elapsedSeconds": 65,
-          "isPr": false,
-          "leaderboardRank": 104,
+          "elapsedSeconds": 129,
+          "isPr": true,
+          "leaderboardRank": 52,
           "leaderboardTotal": 1840
         }
       ],
@@ -2062,7 +2856,11 @@
         "heartrate": 128,
         "elevation": 20,
         "cadence": 82,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.2156,
+          106.747301
+        ]
       },
       {
         "t": 330,
@@ -2071,7 +2869,11 @@
         "heartrate": 130,
         "elevation": 31,
         "cadence": 84,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.236959,
+          106.744824
+        ]
       },
       {
         "t": 660,
@@ -2080,7 +2882,11 @@
         "heartrate": 133,
         "elevation": 42,
         "cadence": 85,
-        "watts": 199
+        "watts": 199,
+        "latlng": [
+          -6.256516,
+          106.754399
+        ]
       },
       {
         "t": 990,
@@ -2089,7 +2895,11 @@
         "heartrate": 134,
         "elevation": 51,
         "cadence": 84,
-        "watts": 205
+        "watts": 205,
+        "latlng": [
+          -6.269032,
+          106.772999
+        ]
       },
       {
         "t": 1320,
@@ -2098,7 +2908,11 @@
         "heartrate": 135,
         "elevation": 57,
         "cadence": 82,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.276282,
+          106.792753
+        ]
       },
       {
         "t": 1650,
@@ -2107,7 +2921,11 @@
         "heartrate": 135,
         "elevation": 61,
         "cadence": 80,
-        "watts": 204
+        "watts": 204,
+        "latlng": [
+          -6.283739,
+          106.811248
+        ]
       },
       {
         "t": 1980,
@@ -2116,7 +2934,11 @@
         "heartrate": 135,
         "elevation": 63,
         "cadence": 79,
-        "watts": 198
+        "watts": 198,
+        "latlng": [
+          -6.290935,
+          106.831914
+        ]
       },
       {
         "t": 2310,
@@ -2125,7 +2947,11 @@
         "heartrate": 135,
         "elevation": 61,
         "cadence": 80,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.290703,
+          106.854963
+        ]
       },
       {
         "t": 2640,
@@ -2134,7 +2960,11 @@
         "heartrate": 135,
         "elevation": 56,
         "cadence": 83,
-        "watts": 180
+        "watts": 180,
+        "latlng": [
+          -6.279036,
+          106.874318
+        ]
       },
       {
         "t": 2970,
@@ -2143,7 +2973,11 @@
         "heartrate": 137,
         "elevation": 49,
         "cadence": 85,
-        "watts": 171
+        "watts": 171,
+        "latlng": [
+          -6.260761,
+          106.885802
+        ]
       },
       {
         "t": 3300,
@@ -2152,7 +2986,11 @@
         "heartrate": 139,
         "elevation": 40,
         "cadence": 85,
-        "watts": 164
+        "watts": 164,
+        "latlng": [
+          -6.242698,
+          106.89316
+        ]
       },
       {
         "t": 3630,
@@ -2161,7 +2999,11 @@
         "heartrate": 141,
         "elevation": 30,
         "cadence": 83,
-        "watts": 160
+        "watts": 160,
+        "latlng": [
+          -6.225247,
+          106.901505
+        ]
       },
       {
         "t": 3960,
@@ -2170,7 +3012,11 @@
         "heartrate": 144,
         "elevation": 20,
         "cadence": 81,
-        "watts": 161
+        "watts": 161,
+        "latlng": [
+          -6.205117,
+          106.908019
+        ]
       },
       {
         "t": 4290,
@@ -2179,7 +3025,11 @@
         "heartrate": 146,
         "elevation": 10,
         "cadence": 79,
-        "watts": 165
+        "watts": 165,
+        "latlng": [
+          -6.183801,
+          106.904741
+        ]
       },
       {
         "t": 4620,
@@ -2188,7 +3038,11 @@
         "heartrate": 148,
         "elevation": 1,
         "cadence": 79,
-        "watts": 173
+        "watts": 173,
+        "latlng": [
+          -6.167466,
+          106.889713
+        ]
       },
       {
         "t": 4950,
@@ -2197,7 +3051,11 @@
         "heartrate": 150,
         "elevation": -6,
         "cadence": 81,
-        "watts": 183
+        "watts": 183,
+        "latlng": [
+          -6.158262,
+          106.869712
+        ]
       },
       {
         "t": 5280,
@@ -2206,7 +3064,11 @@
         "heartrate": 150,
         "elevation": -11,
         "cadence": 84,
-        "watts": 194
+        "watts": 194,
+        "latlng": [
+          -6.151407,
+          106.850814
+        ]
       },
       {
         "t": 5610,
@@ -2215,7 +3077,11 @@
         "heartrate": 150,
         "elevation": -13,
         "cadence": 85,
-        "watts": 203
+        "watts": 203,
+        "latlng": [
+          -6.143448,
+          106.831681
+        ]
       },
       {
         "t": 5940,
@@ -2224,7 +3090,11 @@
         "heartrate": 150,
         "elevation": -11,
         "cadence": 84,
-        "watts": 210
+        "watts": 210,
+        "latlng": [
+          -6.138999,
+          106.809366
+        ]
       },
       {
         "t": 6270,
@@ -2233,7 +3103,11 @@
         "heartrate": 150,
         "elevation": -7,
         "cadence": 82,
-        "watts": 213
+        "watts": 213,
+        "latlng": [
+          -6.145024,
+          106.787266
+        ]
       },
       {
         "t": 6600,
@@ -2242,7 +3116,11 @@
         "heartrate": 151,
         "elevation": -1,
         "cadence": 80,
-        "watts": 212
+        "watts": 212,
+        "latlng": [
+          -6.160991,
+          106.771823
+        ]
       },
       {
         "t": 6930,
@@ -2251,7 +3129,11 @@
         "heartrate": 152,
         "elevation": 8,
         "cadence": 79,
-        "watts": 207
+        "watts": 207,
+        "latlng": [
+          -6.179705,
+          106.763234
+        ]
       },
       {
         "t": 7260,
@@ -2260,7 +3142,11 @@
         "heartrate": 155,
         "elevation": 19,
         "cadence": 80,
-        "watts": 200
+        "watts": 200,
+        "latlng": [
+          -6.197074,
+          106.755644
+        ]
       },
       {
         "t": 7590,
@@ -2269,33 +3155,40 @@
         "heartrate": 158,
         "elevation": 30,
         "cadence": 82,
-        "watts": 190
+        "watts": 190,
+        "latlng": [
+          -6.2156,
+          106.747301
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "n~|d@sapjS|lIs_DzgCeoJq{DyoIwzI{iC{cHlnFkwBbxJj}Fj_H"
   },
   {
     "id": "p-act-10",
     "athleteId": "athlete-premium",
     "name": "Recovery swim",
     "type": "Swim",
-    "startDate": "2026-06-09T08:28:17.915Z",
+    "startDate": "2026-06-09T13:58:50.385Z",
     "distanceMeters": 2000,
     "movingSeconds": 2640,
     "elevationGainMeters": 0,
     "averageHeartrate": 120,
     "averagePace": 22,
     "averageWatts": null,
+    "calories": 308,
+    "caloriesEstimated": false,
     "premium": {
-      "relativeEffort": 58,
+      "relativeEffort": 53,
       "fitnessScore": null,
       "freshnessScore": null,
       "segmentEfforts": [
         {
           "id": "p-act-10-seg-1",
           "name": "Hilltop climb",
-          "elapsedSeconds": 122,
+          "elapsedSeconds": 146,
           "isPr": false,
-          "leaderboardRank": 97,
+          "leaderboardRank": 183,
           "leaderboardTotal": 1840
         }
       ],
@@ -2309,7 +3202,11 @@
         "heartrate": 102,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.19443,
+          106.851685
+        ]
       },
       {
         "t": 115,
@@ -2318,7 +3215,11 @@
         "heartrate": 104,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.194516,
+          106.850986
+        ]
       },
       {
         "t": 230,
@@ -2327,7 +3228,11 @@
         "heartrate": 106,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.19501,
+          106.850454
+        ]
       },
       {
         "t": 344,
@@ -2336,7 +3241,11 @@
         "heartrate": 107,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.195762,
+          106.850225
+        ]
       },
       {
         "t": 459,
@@ -2345,7 +3254,11 @@
         "heartrate": 108,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.196512,
+          106.850175
+        ]
       },
       {
         "t": 574,
@@ -2354,7 +3267,11 @@
         "heartrate": 108,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.19722,
+          106.850106
+        ]
       },
       {
         "t": 689,
@@ -2363,7 +3280,11 @@
         "heartrate": 108,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.198002,
+          106.850065
+        ]
       },
       {
         "t": 803,
@@ -2372,7 +3293,11 @@
         "heartrate": 108,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.198807,
+          106.850281
+        ]
       },
       {
         "t": 918,
@@ -2381,7 +3306,11 @@
         "heartrate": 108,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.19939,
+          106.850825
+        ]
       },
       {
         "t": 1033,
@@ -2390,7 +3319,11 @@
         "heartrate": 109,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199645,
+          106.851507
+        ]
       },
       {
         "t": 1148,
@@ -2399,7 +3332,11 @@
         "heartrate": 111,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199757,
+          106.852146
+        ]
       },
       {
         "t": 1263,
@@ -2408,7 +3345,11 @@
         "heartrate": 113,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199908,
+          106.852774
+        ]
       },
       {
         "t": 1377,
@@ -2417,7 +3358,11 @@
         "heartrate": 115,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199973,
+          106.85347
+        ]
       },
       {
         "t": 1492,
@@ -2426,7 +3371,11 @@
         "heartrate": 117,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199686,
+          106.854115
+        ]
       },
       {
         "t": 1607,
@@ -2435,7 +3384,11 @@
         "heartrate": 119,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.199028,
+          106.854496
+        ]
       },
       {
         "t": 1722,
@@ -2444,7 +3397,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.198253,
+          106.854607
+        ]
       },
       {
         "t": 1837,
@@ -2453,7 +3410,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.197536,
+          106.854653
+        ]
       },
       {
         "t": 1951,
@@ -2462,7 +3423,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.196802,
+          106.854732
+        ]
       },
       {
         "t": 2066,
@@ -2471,7 +3436,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.195985,
+          106.854671
+        ]
       },
       {
         "t": 2181,
@@ -2480,7 +3449,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.195259,
+          106.85428
+        ]
       },
       {
         "t": 2296,
@@ -2489,7 +3462,11 @@
         "heartrate": 121,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.194848,
+          106.853635
+        ]
       },
       {
         "t": 2410,
@@ -2498,7 +3475,11 @@
         "heartrate": 122,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.194698,
+          106.852965
+        ]
       },
       {
         "t": 2525,
@@ -2507,7 +3488,11 @@
         "heartrate": 124,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.194573,
+          106.852347
+        ]
       },
       {
         "t": 2640,
@@ -2516,22 +3501,29 @@
         "heartrate": 126,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.19443,
+          106.851685
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "dzxd@andkShGbH~L^fI_H`AgKwIcFeMK_GrI"
   },
   {
     "id": "f-act-1",
     "athleteId": "athlete-free",
     "name": "Park loop",
     "type": "Run",
-    "startDate": "2026-06-29T08:28:17.915Z",
+    "startDate": "2026-06-29T13:58:50.385Z",
     "distanceMeters": 6000,
     "movingSeconds": 2124,
     "elevationGainMeters": 20,
     "averageHeartrate": 150,
     "averagePace": 5.9,
     "averageWatts": null,
+    "calories": 405,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -2547,7 +3539,11 @@
         "heartrate": 128,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.233976,
+          106.827223
+        ]
       },
       {
         "t": 92,
@@ -2556,7 +3552,11 @@
         "heartrate": 130,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.234811,
+          106.829277
+        ]
       },
       {
         "t": 185,
@@ -2565,7 +3565,11 @@
         "heartrate": 133,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.234907,
+          106.831578
+        ]
       },
       {
         "t": 277,
@@ -2574,7 +3578,11 @@
         "heartrate": 134,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.234159,
+          106.833852
+        ]
       },
       {
         "t": 369,
@@ -2583,7 +3591,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232642,
+          106.835787
+        ]
       },
       {
         "t": 462,
@@ -2592,7 +3604,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230594,
+          106.83715
+        ]
       },
       {
         "t": 554,
@@ -2601,7 +3617,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228313,
+          106.837859
+        ]
       },
       {
         "t": 646,
@@ -2610,7 +3630,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.226049,
+          106.837978
+        ]
       },
       {
         "t": 739,
@@ -2619,7 +3643,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22393,
+          106.837639
+        ]
       },
       {
         "t": 831,
@@ -2628,7 +3656,11 @@
         "heartrate": 137,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221978,
+          106.836941
+        ]
       },
       {
         "t": 923,
@@ -2637,7 +3669,11 @@
         "heartrate": 139,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220196,
+          106.835897
+        ]
       },
       {
         "t": 1016,
@@ -2646,7 +3682,11 @@
         "heartrate": 141,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218654,
+          106.834457
+        ]
       },
       {
         "t": 1108,
@@ -2655,7 +3695,11 @@
         "heartrate": 144,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217526,
+          106.832594
+        ]
       },
       {
         "t": 1201,
@@ -2664,7 +3708,11 @@
         "heartrate": 146,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217038,
+          106.830388
+        ]
       },
       {
         "t": 1293,
@@ -2673,7 +3721,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217362,
+          106.828061
+        ]
       },
       {
         "t": 1385,
@@ -2682,7 +3734,11 @@
         "heartrate": 150,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218515,
+          106.82592
+        ]
       },
       {
         "t": 1478,
@@ -2691,7 +3747,11 @@
         "heartrate": 150,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220334,
+          106.824251
+        ]
       },
       {
         "t": 1570,
@@ -2700,7 +3760,11 @@
         "heartrate": 150,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222536,
+          106.823215
+        ]
       },
       {
         "t": 1662,
@@ -2709,7 +3773,11 @@
         "heartrate": 150,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224832,
+          106.822816
+        ]
       },
       {
         "t": 1755,
@@ -2718,7 +3786,11 @@
         "heartrate": 150,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227032,
+          106.822942
+        ]
       },
       {
         "t": 1847,
@@ -2727,7 +3799,11 @@
         "heartrate": 151,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229066,
+          106.823468
+        ]
       },
       {
         "t": 1939,
@@ -2736,7 +3812,11 @@
         "heartrate": 152,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230936,
+          106.824335
+        ]
       },
       {
         "t": 2032,
@@ -2745,7 +3825,11 @@
         "heartrate": 155,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232614,
+          106.82557
+        ]
       },
       {
         "t": 2124,
@@ -2754,22 +3838,29 @@
         "heartrate": 158,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.233976,
+          106.827223
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "jq`e@cu_kSb@mh@qc@aXqf@vDyZdZbEth@nf@jRde@oH"
   },
   {
     "id": "f-act-2",
     "athleteId": "athlete-free",
     "name": "Easy jog",
     "type": "Run",
-    "startDate": "2026-06-26T08:28:17.915Z",
+    "startDate": "2026-06-26T13:58:50.385Z",
     "distanceMeters": 4500,
     "movingSeconds": 1755,
     "elevationGainMeters": 8,
     "averageHeartrate": 130,
     "averagePace": 6.5,
     "averageWatts": null,
+    "calories": 334,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -2785,7 +3876,11 @@
         "heartrate": 111,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231582,
+          106.828418
+        ]
       },
       {
         "t": 76,
@@ -2794,7 +3889,11 @@
         "heartrate": 113,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232208,
+          106.829958
+        ]
       },
       {
         "t": 153,
@@ -2803,7 +3902,11 @@
         "heartrate": 115,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23228,
+          106.831684
+        ]
       },
       {
         "t": 229,
@@ -2812,7 +3915,11 @@
         "heartrate": 116,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231719,
+          106.833389
+        ]
       },
       {
         "t": 305,
@@ -2821,7 +3928,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230582,
+          106.83484
+        ]
       },
       {
         "t": 382,
@@ -2830,7 +3941,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229045,
+          106.835862
+        ]
       },
       {
         "t": 458,
@@ -2839,7 +3954,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227335,
+          106.836394
+        ]
       },
       {
         "t": 534,
@@ -2848,7 +3967,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225637,
+          106.836484
+        ]
       },
       {
         "t": 610,
@@ -2857,7 +3980,11 @@
         "heartrate": 117,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224047,
+          106.836229
+        ]
       },
       {
         "t": 687,
@@ -2866,7 +3993,11 @@
         "heartrate": 118,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222584,
+          106.835706
+        ]
       },
       {
         "t": 763,
@@ -2875,7 +4006,11 @@
         "heartrate": 120,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221247,
+          106.834923
+        ]
       },
       {
         "t": 839,
@@ -2884,7 +4019,11 @@
         "heartrate": 122,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22009,
+          106.833843
+        ]
       },
       {
         "t": 916,
@@ -2893,7 +4032,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219244,
+          106.832445
+        ]
       },
       {
         "t": 992,
@@ -2902,7 +4045,11 @@
         "heartrate": 127,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218879,
+          106.830791
+        ]
       },
       {
         "t": 1068,
@@ -2911,7 +4058,11 @@
         "heartrate": 129,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219122,
+          106.829046
+        ]
       },
       {
         "t": 1145,
@@ -2920,7 +4071,11 @@
         "heartrate": 130,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219986,
+          106.82744
+        ]
       },
       {
         "t": 1221,
@@ -2929,7 +4084,11 @@
         "heartrate": 130,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221351,
+          106.826188
+        ]
       },
       {
         "t": 1297,
@@ -2938,7 +4097,11 @@
         "heartrate": 130,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223002,
+          106.825411
+        ]
       },
       {
         "t": 1373,
@@ -2947,7 +4110,11 @@
         "heartrate": 130,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224724,
+          106.825112
+        ]
       },
       {
         "t": 1450,
@@ -2956,7 +4123,11 @@
         "heartrate": 130,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.226374,
+          106.825206
+        ]
       },
       {
         "t": 1526,
@@ -2965,7 +4136,11 @@
         "heartrate": 131,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.2279,
+          106.825601
+        ]
       },
       {
         "t": 1602,
@@ -2974,7 +4149,11 @@
         "heartrate": 132,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229302,
+          106.826251
+        ]
       },
       {
         "t": 1679,
@@ -2983,7 +4162,11 @@
         "heartrate": 134,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23056,
+          106.827178
+        ]
       },
       {
         "t": 1755,
@@ -2992,22 +4175,29 @@
         "heartrate": 137,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231582,
+          106.828418
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "jb`e@s|_kSZa^mZwQu\\fC{SjStCh^p\\pMr[cF"
   },
   {
     "id": "f-act-3",
     "athleteId": "athlete-free",
     "name": "Weekend long run",
     "type": "Run",
-    "startDate": "2026-06-23T08:28:17.915Z",
+    "startDate": "2026-06-23T13:58:50.385Z",
     "distanceMeters": 12000,
     "movingSeconds": 4320,
     "elevationGainMeters": 60,
     "averageHeartrate": 148,
     "averagePace": 6,
     "averageWatts": null,
+    "calories": 823,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -3023,7 +4213,11 @@
         "heartrate": 126,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.241152,
+          106.824447
+        ]
       },
       {
         "t": 188,
@@ -3032,7 +4226,11 @@
         "heartrate": 128,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.242823,
+          106.828554
+        ]
       },
       {
         "t": 376,
@@ -3041,7 +4239,11 @@
         "heartrate": 131,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.243013,
+          106.833157
+        ]
       },
       {
         "t": 563,
@@ -3050,7 +4252,11 @@
         "heartrate": 132,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.241517,
+          106.837704
+        ]
       },
       {
         "t": 751,
@@ -3059,7 +4265,11 @@
         "heartrate": 133,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.238485,
+          106.841574
+        ]
       },
       {
         "t": 939,
@@ -3068,7 +4278,11 @@
         "heartrate": 133,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.234387,
+          106.8443
+        ]
       },
       {
         "t": 1127,
@@ -3077,7 +4291,11 @@
         "heartrate": 133,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229826,
+          106.845717
+        ]
       },
       {
         "t": 1315,
@@ -3086,7 +4304,11 @@
         "heartrate": 133,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225298,
+          106.845956
+        ]
       },
       {
         "t": 1503,
@@ -3095,7 +4317,11 @@
         "heartrate": 134,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22106,
+          106.845278
+        ]
       },
       {
         "t": 1690,
@@ -3104,7 +4330,11 @@
         "heartrate": 135,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217157,
+          106.843882
+        ]
       },
       {
         "t": 1878,
@@ -3113,7 +4343,11 @@
         "heartrate": 137,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213592,
+          106.841794
+        ]
       },
       {
         "t": 2066,
@@ -3122,7 +4356,11 @@
         "heartrate": 139,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210508,
+          106.838914
+        ]
       },
       {
         "t": 2254,
@@ -3131,7 +4369,11 @@
         "heartrate": 142,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.208252,
+          106.835187
+        ]
       },
       {
         "t": 2442,
@@ -3140,7 +4382,11 @@
         "heartrate": 144,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207277,
+          106.830776
+        ]
       },
       {
         "t": 2630,
@@ -3149,7 +4395,11 @@
         "heartrate": 146,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.207924,
+          106.826123
+        ]
       },
       {
         "t": 2817,
@@ -3158,7 +4408,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.21023,
+          106.821841
+        ]
       },
       {
         "t": 3005,
@@ -3167,7 +4421,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213868,
+          106.818502
+        ]
       },
       {
         "t": 3193,
@@ -3176,7 +4434,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218271,
+          106.816431
+        ]
       },
       {
         "t": 3381,
@@ -3185,7 +4447,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222864,
+          106.815631
+        ]
       },
       {
         "t": 3569,
@@ -3194,7 +4460,11 @@
         "heartrate": 148,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227264,
+          106.815884
+        ]
       },
       {
         "t": 3757,
@@ -3203,7 +4473,11 @@
         "heartrate": 149,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.231333,
+          106.816936
+        ]
       },
       {
         "t": 3944,
@@ -3212,7 +4486,11 @@
         "heartrate": 150,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.235072,
+          106.81867
+        ]
       },
       {
         "t": 4132,
@@ -3221,7 +4499,11 @@
         "heartrate": 153,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.238427,
+          106.82114
+        ]
       },
       {
         "t": 4320,
@@ -3230,22 +4512,29 @@
         "heartrate": 155,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.241152,
+          106.824447
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "d~ae@yc_kShAyqAahAcq@enAnJuv@hu@jKlrA|mAxe@hkA_R"
   },
   {
     "id": "f-act-4",
     "athleteId": "athlete-free",
     "name": "Lunch ride",
     "type": "Ride",
-    "startDate": "2026-06-21T08:28:17.915Z",
+    "startDate": "2026-06-21T13:58:50.385Z",
     "distanceMeters": 15000,
     "movingSeconds": 2520,
     "elevationGainMeters": 80,
     "averageHeartrate": 132,
     "averagePace": 2.8,
     "averageWatts": null,
+    "calories": 368,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -3261,7 +4550,11 @@
         "heartrate": 112,
         "elevation": 20,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.24474,
+          106.822859
+        ]
       },
       {
         "t": 110,
@@ -3270,7 +4563,11 @@
         "heartrate": 115,
         "elevation": 31,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.246828,
+          106.827993
+        ]
       },
       {
         "t": 219,
@@ -3279,7 +4576,11 @@
         "heartrate": 117,
         "elevation": 42,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.247067,
+          106.833746
+        ]
       },
       {
         "t": 329,
@@ -3288,7 +4589,11 @@
         "heartrate": 118,
         "elevation": 51,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.245197,
+          106.83943
+        ]
       },
       {
         "t": 438,
@@ -3297,7 +4602,11 @@
         "heartrate": 119,
         "elevation": 57,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.241406,
+          106.844268
+        ]
       },
       {
         "t": 548,
@@ -3306,7 +4615,11 @@
         "heartrate": 119,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.236284,
+          106.847675
+        ]
       },
       {
         "t": 657,
@@ -3315,7 +4628,11 @@
         "heartrate": 119,
         "elevation": 63,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230582,
+          106.849447
+        ]
       },
       {
         "t": 767,
@@ -3324,7 +4641,11 @@
         "heartrate": 119,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224923,
+          106.849745
+        ]
       },
       {
         "t": 877,
@@ -3333,7 +4654,11 @@
         "heartrate": 119,
         "elevation": 56,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219625,
+          106.848898
+        ]
       },
       {
         "t": 986,
@@ -3342,7 +4667,11 @@
         "heartrate": 120,
         "elevation": 49,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.214746,
+          106.847153
+        ]
       },
       {
         "t": 1096,
@@ -3351,7 +4680,11 @@
         "heartrate": 122,
         "elevation": 40,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.21029,
+          106.844542
+        ]
       },
       {
         "t": 1205,
@@ -3360,7 +4693,11 @@
         "heartrate": 124,
         "elevation": 30,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.206435,
+          106.840943
+        ]
       },
       {
         "t": 1315,
@@ -3369,7 +4706,11 @@
         "heartrate": 127,
         "elevation": 20,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.203615,
+          106.836284
+        ]
       },
       {
         "t": 1424,
@@ -3378,7 +4719,11 @@
         "heartrate": 129,
         "elevation": 10,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.202396,
+          106.830771
+        ]
       },
       {
         "t": 1534,
@@ -3387,7 +4732,11 @@
         "heartrate": 131,
         "elevation": 1,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.203205,
+          106.824953
+        ]
       },
       {
         "t": 1643,
@@ -3396,7 +4745,11 @@
         "heartrate": 132,
         "elevation": -6,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.206088,
+          106.819601
+        ]
       },
       {
         "t": 1753,
@@ -3405,7 +4758,11 @@
         "heartrate": 132,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.210635,
+          106.815427
+        ]
       },
       {
         "t": 1863,
@@ -3414,7 +4771,11 @@
         "heartrate": 132,
         "elevation": -13,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.216139,
+          106.812838
+        ]
       },
       {
         "t": 1972,
@@ -3423,7 +4784,11 @@
         "heartrate": 132,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22188,
+          106.811839
+        ]
       },
       {
         "t": 2082,
@@ -3432,7 +4797,11 @@
         "heartrate": 132,
         "elevation": -7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227379,
+          106.812155
+        ]
       },
       {
         "t": 2191,
@@ -3441,7 +4810,11 @@
         "heartrate": 133,
         "elevation": -1,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232466,
+          106.81347
+        ]
       },
       {
         "t": 2301,
@@ -3450,7 +4823,11 @@
         "heartrate": 134,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23714,
+          106.815638
+        ]
       },
       {
         "t": 2410,
@@ -3459,7 +4836,11 @@
         "heartrate": 136,
         "elevation": 19,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.241334,
+          106.818725
+        ]
       },
       {
         "t": 2520,
@@ -3468,22 +4849,29 @@
         "heartrate": 139,
         "elevation": 30,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.24474,
+          106.822859
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "rtbe@{y~jSzAqfBkzAs}@}aBjMsdA|bAnNfgBtaBno@j~AwV"
   },
   {
     "id": "f-act-5",
     "athleteId": "athlete-free",
     "name": "Hill run",
     "type": "Run",
-    "startDate": "2026-06-17T08:28:17.915Z",
+    "startDate": "2026-06-17T13:58:50.385Z",
     "distanceMeters": 7500,
     "movingSeconds": 2565,
     "elevationGainMeters": 140,
     "averageHeartrate": 160,
     "averagePace": 5.7,
     "averageWatts": null,
+    "calories": 489,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -3499,7 +4887,11 @@
         "heartrate": 136,
         "elevation": 20,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23437,
+          106.826829
+        ]
       },
       {
         "t": 112,
@@ -3508,7 +4900,11 @@
         "heartrate": 139,
         "elevation": 31,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.235414,
+          106.829396
+        ]
       },
       {
         "t": 223,
@@ -3517,7 +4913,11 @@
         "heartrate": 141,
         "elevation": 42,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.235533,
+          106.832273
+        ]
       },
       {
         "t": 335,
@@ -3526,7 +4926,11 @@
         "heartrate": 143,
         "elevation": 51,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.234598,
+          106.835115
+        ]
       },
       {
         "t": 446,
@@ -3535,7 +4939,11 @@
         "heartrate": 144,
         "elevation": 57,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232703,
+          106.837534
+        ]
       },
       {
         "t": 558,
@@ -3544,7 +4952,11 @@
         "heartrate": 144,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.230142,
+          106.839237
+        ]
       },
       {
         "t": 669,
@@ -3553,7 +4965,11 @@
         "heartrate": 144,
         "elevation": 63,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227291,
+          106.840123
+        ]
       },
       {
         "t": 781,
@@ -3562,7 +4978,11 @@
         "heartrate": 144,
         "elevation": 61,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224461,
+          106.840273
+        ]
       },
       {
         "t": 892,
@@ -3571,7 +4991,11 @@
         "heartrate": 144,
         "elevation": 56,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221812,
+          106.839849
+        ]
       },
       {
         "t": 1004,
@@ -3580,7 +5004,11 @@
         "heartrate": 146,
         "elevation": 49,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219373,
+          106.838976
+        ]
       },
       {
         "t": 1115,
@@ -3589,7 +5017,11 @@
         "heartrate": 148,
         "elevation": 40,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217145,
+          106.837671
+        ]
       },
       {
         "t": 1227,
@@ -3598,7 +5030,11 @@
         "heartrate": 151,
         "elevation": 30,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.215217,
+          106.835871
+        ]
       },
       {
         "t": 1338,
@@ -3607,7 +5043,11 @@
         "heartrate": 153,
         "elevation": 20,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213807,
+          106.833542
+        ]
       },
       {
         "t": 1450,
@@ -3616,7 +5056,11 @@
         "heartrate": 156,
         "elevation": 10,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213198,
+          106.830785
+        ]
       },
       {
         "t": 1561,
@@ -3625,7 +5069,11 @@
         "heartrate": 158,
         "elevation": 1,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.213603,
+          106.827877
+        ]
       },
       {
         "t": 1673,
@@ -3634,7 +5082,11 @@
         "heartrate": 160,
         "elevation": -6,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.215044,
+          106.8252
+        ]
       },
       {
         "t": 1784,
@@ -3643,7 +5095,11 @@
         "heartrate": 160,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.217318,
+          106.823114
+        ]
       },
       {
         "t": 1896,
@@ -3652,7 +5108,11 @@
         "heartrate": 160,
         "elevation": -13,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22007,
+          106.821819
+        ]
       },
       {
         "t": 2007,
@@ -3661,7 +5121,11 @@
         "heartrate": 160,
         "elevation": -11,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22294,
+          106.82132
+        ]
       },
       {
         "t": 2119,
@@ -3670,7 +5134,11 @@
         "heartrate": 160,
         "elevation": -7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22569,
+          106.821477
+        ]
       },
       {
         "t": 2230,
@@ -3679,7 +5147,11 @@
         "heartrate": 161,
         "elevation": -1,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228233,
+          106.822135
+        ]
       },
       {
         "t": 2342,
@@ -3688,7 +5160,11 @@
         "heartrate": 163,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23057,
+          106.823219
+        ]
       },
       {
         "t": 2453,
@@ -3697,7 +5173,11 @@
         "heartrate": 165,
         "elevation": 19,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.232667,
+          106.824763
+        ]
       },
       {
         "t": 2565,
@@ -3706,22 +5186,29 @@
         "heartrate": 168,
         "elevation": 30,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.23437,
+          106.826829
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "xs`e@ur_kSl@yr@ul@g^op@bFwa@~`@tFbs@jp@fWtn@{J"
   },
   {
     "id": "f-act-6",
     "athleteId": "athlete-free",
     "name": "Short recovery jog",
     "type": "Run",
-    "startDate": "2026-06-15T08:28:17.915Z",
+    "startDate": "2026-06-15T13:58:50.386Z",
     "distanceMeters": 3500,
     "movingSeconds": 1428,
     "elevationGainMeters": 5,
     "averageHeartrate": 125,
     "averagePace": 6.8,
     "averageWatts": null,
+    "calories": 272,
+    "caloriesEstimated": false,
     "premium": {
       "relativeEffort": null,
       "fitnessScore": null,
@@ -3737,7 +5224,11 @@
         "heartrate": 106,
         "elevation": 5,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228653,
+          106.828947
+        ]
       },
       {
         "t": 62,
@@ -3746,7 +5237,11 @@
         "heartrate": 109,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22914,
+          106.830145
+        ]
       },
       {
         "t": 124,
@@ -3755,7 +5250,11 @@
         "heartrate": 110,
         "elevation": 5,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.229196,
+          106.831487
+        ]
       },
       {
         "t": 186,
@@ -3764,7 +5263,11 @@
         "heartrate": 112,
         "elevation": 5,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228759,
+          106.832814
+        ]
       },
       {
         "t": 248,
@@ -3773,7 +5276,11 @@
         "heartrate": 112,
         "elevation": 6,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227875,
+          106.833943
+        ]
       },
       {
         "t": 310,
@@ -3782,7 +5289,11 @@
         "heartrate": 113,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.22668,
+          106.834737
+        ]
       },
       {
         "t": 373,
@@ -3791,7 +5302,11 @@
         "heartrate": 112,
         "elevation": 6,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225349,
+          106.835151
+        ]
       },
       {
         "t": 435,
@@ -3800,7 +5315,11 @@
         "heartrate": 112,
         "elevation": 6,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224029,
+          106.835221
+        ]
       },
       {
         "t": 497,
@@ -3809,7 +5328,11 @@
         "heartrate": 113,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.222792,
+          106.835023
+        ]
       },
       {
         "t": 559,
@@ -3818,7 +5341,11 @@
         "heartrate": 114,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221654,
+          106.834616
+        ]
       },
       {
         "t": 621,
@@ -3827,7 +5354,11 @@
         "heartrate": 115,
         "elevation": 6,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220614,
+          106.834007
+        ]
       },
       {
         "t": 683,
@@ -3836,7 +5367,11 @@
         "heartrate": 118,
         "elevation": 6,
         "cadence": 83,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219715,
+          106.833167
+        ]
       },
       {
         "t": 745,
@@ -3845,7 +5380,11 @@
         "heartrate": 120,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219057,
+          106.83208
+        ]
       },
       {
         "t": 807,
@@ -3854,7 +5393,11 @@
         "heartrate": 122,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218772,
+          106.830793
+        ]
       },
       {
         "t": 869,
@@ -3863,7 +5406,11 @@
         "heartrate": 124,
         "elevation": 7,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.218961,
+          106.829436
+        ]
       },
       {
         "t": 931,
@@ -3872,7 +5419,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 81,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.219634,
+          106.828187
+        ]
       },
       {
         "t": 993,
@@ -3881,7 +5432,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.220695,
+          106.827213
+        ]
       },
       {
         "t": 1055,
@@ -3890,7 +5445,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 85,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.221979,
+          106.826609
+        ]
       },
       {
         "t": 1118,
@@ -3899,7 +5458,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 84,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.223319,
+          106.826376
+        ]
       },
       {
         "t": 1180,
@@ -3908,7 +5471,11 @@
         "heartrate": 125,
         "elevation": 7,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.224602,
+          106.826449
+        ]
       },
       {
         "t": 1242,
@@ -3917,7 +5484,11 @@
         "heartrate": 126,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.225789,
+          106.826756
+        ]
       },
       {
         "t": 1304,
@@ -3926,7 +5497,11 @@
         "heartrate": 127,
         "elevation": 8,
         "cadence": 79,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.226879,
+          106.827262
+        ]
       },
       {
         "t": 1366,
@@ -3935,7 +5510,11 @@
         "heartrate": 129,
         "elevation": 8,
         "cadence": 80,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.227858,
+          106.827983
+        ]
       },
       {
         "t": 1428,
@@ -3944,8 +5523,13 @@
         "heartrate": 131,
         "elevation": 8,
         "cadence": 82,
-        "watts": null
+        "watts": null,
+        "latlng": [
+          -6.228653,
+          106.828947
+        ]
       }
-    ]
+    ],
+    "summaryPolyline": "`p_e@}_`kSTcWiTsMcVhBeOzNpBhW`VhJfUoD"
   }
 ]

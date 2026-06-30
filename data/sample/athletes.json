@@ -2,11 +2,13 @@
   {
     "id": "athlete-premium",
     "name": "Primawan (Premium)",
-    "isPremium": true
+    "isPremium": true,
+    "profilePictureUrl": null
   },
   {
     "id": "athlete-free",
     "name": "Primawan (Free)",
-    "isPremium": false
+    "isPremium": false,
+    "profilePictureUrl": null
   }
 ]

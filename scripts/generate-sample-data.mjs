@@ -2,8 +2,76 @@ import { writeFileSync, mkdirSync } from "fs";
 
 mkdirSync("data/sample", { recursive: true });
 
-function streamFor(distanceMeters, movingSeconds, basePace, baseHr, hilly, hasPower) {
+const JAKARTA_CENTER = [-6.2088, 106.8456];
+const METERS_PER_DEGREE_LAT = 111320;
+
+function hashSeed(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return h;
+}
+
+/** Generates a closed-loop route whose perimeter roughly matches distanceMeters. */
+function routeLatLngs(distanceMeters, seed, pointsCount) {
+  const rand = (n) => ((seed >> n) % 100) / 100;
+  const centerLatOffset = (rand(0) - 0.5) * 0.04;
+  const centerLngOffset = (rand(4) - 0.5) * 0.04;
+  const rotation = rand(8) * Math.PI * 2;
+  const aspect = 0.55 + rand(12) * 0.5;
+  const lobes = 1 + Math.floor(rand(16) * 2);
+
+  const radiusDeg = distanceMeters / (2 * Math.PI) / METERS_PER_DEGREE_LAT;
+  const centerLat = JAKARTA_CENTER[0] + centerLatOffset;
+  const centerLng = JAKARTA_CENTER[1] + centerLngOffset;
+  const lngScale = 1 / Math.cos((centerLat * Math.PI) / 180);
+
+  const points = [];
+  for (let i = 0; i < pointsCount; i++) {
+    const frac = i / (pointsCount - 1);
+    const angle = frac * Math.PI * 2;
+    const wobble = 1 + 0.08 * Math.sin(angle * lobes * 2);
+    const x = Math.cos(angle) * radiusDeg * wobble;
+    const y = Math.sin(angle) * radiusDeg * aspect * wobble;
+    const rx = x * Math.cos(rotation) - y * Math.sin(rotation);
+    const ry = x * Math.sin(rotation) + y * Math.cos(rotation);
+    const lat = centerLat + ry;
+    const lng = centerLng + rx * lngScale;
+    points.push([Number(lat.toFixed(6)), Number(lng.toFixed(6))]);
+  }
+  return points;
+}
+
+/** Encodes [lat, lng] pairs using the Google polyline algorithm (precision 5). */
+function encodePolyline(points) {
+  let lastLat = 0;
+  let lastLng = 0;
+  let result = "";
+
+  for (const [lat, lng] of points) {
+    const latE5 = Math.round(lat * 1e5);
+    const lngE5 = Math.round(lng * 1e5);
+    result += encodeValue(latE5 - lastLat);
+    result += encodeValue(lngE5 - lastLng);
+    lastLat = latE5;
+    lastLng = lngE5;
+  }
+  return result;
+}
+
+function encodeValue(value) {
+  let v = value < 0 ? ~(value << 1) : value << 1;
+  let result = "";
+  while (v >= 0x20) {
+    result += String.fromCharCode((0x20 | (v & 0x1f)) + 63);
+    v >>= 5;
+  }
+  result += String.fromCharCode(v + 63);
+  return result;
+}
+
+function streamFor(distanceMeters, movingSeconds, basePace, baseHr, hilly, hasPower, seed) {
   const points = 24;
+  const route = routeLatLngs(distanceMeters, seed, points);
   const stream = [];
   for (let i = 0; i < points; i++) {
     const frac = i / (points - 1);
@@ -22,6 +90,7 @@ function streamFor(distanceMeters, movingSeconds, basePace, baseHr, hilly, hasPo
       elevation,
       cadence: Math.round(82 + Math.sin(frac * Math.PI * 6) * 3),
       watts: hasPower ? Math.round(180 + Math.sin(frac * Math.PI * 3) * 25 + frac * 10) : null,
+      latlng: route[i],
     });
   }
   return stream;
@@ -31,6 +100,7 @@ function makeActivity({ id, athleteId, name, type, daysAgo, distanceKm, paceMinP
   const distanceMeters = Math.round(distanceKm * 1000);
   const movingSeconds = Math.round(distanceKm * paceMinPerKm * 60);
   const startDate = new Date(Date.now() - daysAgo * 86400000).toISOString();
+  const seed = hashSeed(id);
 
   const premiumFields = premium
     ? {
@@ -64,6 +134,13 @@ function makeActivity({ id, athleteId, name, type, daysAgo, distanceKm, paceMinP
         powerCurve: null,
       };
 
+  const streams = streamFor(distanceMeters, movingSeconds, paceMinPerKm, avgHr, elevGain > 60, hasPower, seed);
+  const decimated = streams.filter((_, i) => i % 3 === 0).map((p) => p.latlng);
+  const summaryPolyline = encodePolyline(decimated);
+
+  const MET_BY_TYPE = { Run: 9.8, Ride: 7.5, Swim: 6.0 };
+  const calories = Math.round((MET_BY_TYPE[type] ?? 7) * 70 * (movingSeconds / 3600));
+
   return {
     id,
     athleteId,
@@ -76,8 +153,11 @@ function makeActivity({ id, athleteId, name, type, daysAgo, distanceKm, paceMinP
     averageHeartrate: avgHr,
     averagePace: Number(paceMinPerKm.toFixed(2)),
     averageWatts: hasPower ? 280 : null,
+    calories,
+    caloriesEstimated: false,
     premium: premiumFields,
-    streams: streamFor(distanceMeters, movingSeconds, paceMinPerKm, avgHr, elevGain > 60, hasPower),
+    streams,
+    summaryPolyline,
   };
 }
 
@@ -104,8 +184,8 @@ const freeActivities = [
 ];
 
 const athletes = [
-  { id: "athlete-premium", name: "Primawan (Premium)", isPremium: true },
-  { id: "athlete-free", name: "Primawan (Free)", isPremium: false },
+  { id: "athlete-premium", name: "Primawan (Premium)", isPremium: true, profilePictureUrl: null },
+  { id: "athlete-free", name: "Primawan (Free)", isPremium: false, profilePictureUrl: null },
 ];
 
 writeFileSync("data/sample/athletes.json", JSON.stringify(athletes, null, 2));
