@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BarChart3, Lightbulb, Settings } from "lucide-react";
+import { Home, BarChart3, Lightbulb, Settings, Trophy } from "lucide-react";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
   { href: "/activities", label: "Activities", icon: BarChart3 },
+  { href: "/records", label: "Records", icon: Trophy },
   { href: "/insights", label: "Insights", icon: Lightbulb },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
@@ -25,7 +26,7 @@ export default function BottomNav() {
           <Link
             key={href}
             href={href}
-            className="flex flex-col items-center gap-1 px-3 py-1"
+            className="flex flex-col items-center gap-1 px-2 py-1"
           >
             <Icon
               size={20}
