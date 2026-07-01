@@ -111,12 +111,15 @@ export async function GET(
         },
       });
 
-      return response.text ?? "";
+      const text = response.text;
+      if (!text) throw new Error("Empty response from Gemini");
+      return text;
     });
 
     return NextResponse.json({ narrative });
   } catch (err) {
-    console.error("Coach narrative failed:", err);
-    return NextResponse.json({ error: "Generation failed" }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Coach narrative failed:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

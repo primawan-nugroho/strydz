@@ -9,6 +9,7 @@ type State = "loading" | "ready" | "error" | "disabled";
 export default function CoachNote({ activityId }: { activityId: string }) {
   const [state, setState] = useState<State>("loading");
   const [text, setText] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     let cancelled = false;
@@ -16,17 +17,19 @@ export default function CoachNote({ activityId }: { activityId: string }) {
     async function load() {
       try {
         const res = await fetch(`/api/coach/${activityId}`);
-        if (!res.ok) {
-          if (!cancelled) setState("disabled"); // no key configured or not found
+        const json = await res.json().catch(() => ({}));
+        if (cancelled) return;
+        if (res.status === 503) {
+          // No API key configured — hide silently
+          setState("disabled");
           return;
         }
-        const { narrative, error } = await res.json();
-        if (cancelled) return;
-        if (error || !narrative) {
+        if (!res.ok || json.error || !json.narrative) {
+          setErrorMsg(json.error ?? `HTTP ${res.status}`);
           setState("error");
           return;
         }
-        setText(narrative);
+        setText(json.narrative);
         setState("ready");
       } catch {
         if (!cancelled) setState("error");
@@ -64,7 +67,7 @@ export default function CoachNote({ activityId }: { activityId: string }) {
 
       {state === "error" && (
         <p className="text-[12px] text-text-muted italic">
-          Couldn&apos;t generate a note right now.
+          Couldn&apos;t generate a note right now.{errorMsg ? ` (${errorMsg})` : ""}
         </p>
       )}
     </div>
