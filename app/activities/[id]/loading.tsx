@@ -41,6 +41,16 @@ export default function ActivityDetailLoading() {
         </div>
       </div>
 
+      {/* Coach note */}
+      <div className="bg-surface-2 rounded-2xl p-4 mb-4">
+        <Skeleton className="h-3 w-24 mb-3" />
+        <div className="space-y-2">
+          <Skeleton className="h-3 w-full" />
+          <Skeleton className="h-3 w-11/12" />
+          <Skeleton className="h-3 w-4/5" />
+        </div>
+      </div>
+
       {/* Export button */}
       <Skeleton className="h-11 w-full rounded-full" />
     </div>

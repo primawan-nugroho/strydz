@@ -15,6 +15,7 @@ import InfoTooltip from "@/components/InfoTooltip";
 import RatingBadge from "@/components/RatingBadge";
 import RatingScale from "@/components/RatingScale";
 import ExportShareCardButton from "@/components/ExportShareCardButton";
+import CoachNote from "@/components/CoachNote";
 import { ArrowLeft, Trophy } from "lucide-react";
 
 function formatDistance(meters: number) {
@@ -128,6 +129,8 @@ export default async function ActivityDetailPage({
       <div className="bg-surface-2 rounded-2xl p-4 mb-4">
         <ActivityCharts streams={activity.streams} />
       </div>
+
+      <CoachNote activityId={activity.id} />
 
       <p className="text-[13px] font-medium text-text-secondary mb-2">Insights</p>
       <div className="flex flex-col gap-2.5 mb-4">
