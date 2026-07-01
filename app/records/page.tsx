@@ -8,9 +8,9 @@ import SparklineChart from "@/components/SparklineChart";
 import Link from "next/link";
 import { Trophy, Ruler, Mountain, Flame, Zap, Clock, TrendingUp } from "lucide-react";
 
-function fmtPace(secPerKm: number): string {
-  const min = Math.floor(secPerKm / 60);
-  const sec = Math.round(secPerKm % 60);
+function fmtPace(minPerKm: number): string {
+  const min = Math.floor(minPerKm);
+  const sec = Math.round((minPerKm - min) * 60);
   return `${min}:${sec.toString().padStart(2, "0")} /km`;
 }
 
@@ -101,7 +101,7 @@ export default async function RecordsPage() {
               <PrCard
                 icon={<Zap size={14} />}
                 label="Best 5K pace"
-                value={fmtPace(prs.bestPace5k.paceSecPerKm)}
+                value={fmtPace(prs.bestPace5k.paceMinPerKm)}
                 activityId={prs.bestPace5k.activity.id}
                 activityName={prs.bestPace5k.activity.name}
                 activityDate={prs.bestPace5k.activity.startDate}
@@ -111,7 +111,7 @@ export default async function RecordsPage() {
               <PrCard
                 icon={<Clock size={14} />}
                 label="Best 10K pace"
-                value={fmtPace(prs.bestPace10k.paceSecPerKm)}
+                value={fmtPace(prs.bestPace10k.paceMinPerKm)}
                 activityId={prs.bestPace10k.activity.id}
                 activityName={prs.bestPace10k.activity.name}
                 activityDate={prs.bestPace10k.activity.startDate}

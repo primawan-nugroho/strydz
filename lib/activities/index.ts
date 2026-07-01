@@ -77,6 +77,27 @@ export async function getActivities(_athleteId?: string): Promise<Activity[]> {
   }
 }
 
+const PAGE_SIZE = 20;
+
+/** Paginated fetch — used by the /api/activities route for "load more". */
+export async function getActivitiesPage(page: number): Promise<Activity[]> {
+  const session = await getStravaSession();
+  if (!session) {
+    // Paginate the sample fixtures in-memory.
+    const all = await getSampleActivities();
+    return all.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  }
+  try {
+    const live = await getActivitiesLive(session, page, PAGE_SIZE);
+    if (live.length > 0) return live;
+    // Strava returned empty (past end of history) — no demo fallback for subsequent pages.
+    return [];
+  } catch (err) {
+    console.error("Strava getActivitiesPage failed:", err);
+    return [];
+  }
+}
+
 export async function getActivityDetail(id: string): Promise<Activity | null> {
   const session = await getStravaSession();
   if (!session) return getSampleActivityDetail(id);

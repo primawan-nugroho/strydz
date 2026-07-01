@@ -14,9 +14,16 @@ export async function getCurrentAthleteLive(session: TokenSet): Promise<Athlete>
   return mapAthlete(athlete);
 }
 
-export async function getActivitiesLive(session: TokenSet): Promise<Activity[]> {
-  const activities = await withCache(`activities:${session.athleteId}`, LIST_TTL_MS, () =>
-    listActivities(session.accessToken)
+export async function getActivitiesLive(
+  session: TokenSet,
+  page = 1,
+  perPage = 20
+): Promise<Activity[]> {
+  // Each page/perPage combo gets its own cache key.
+  const activities = await withCache(
+    `activities:${session.athleteId}:${page}:${perPage}`,
+    LIST_TTL_MS,
+    () => listActivities(session.accessToken, perPage, page)
   );
   return activities
     .map((a) => mapActivitySummary(session.athleteId, a))

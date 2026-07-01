@@ -11,8 +11,9 @@ export interface PersonalRecords {
   longestRun: { activity: PrActivity; distanceKm: number } | null;
   biggestClimb: { activity: PrActivity; elevationM: number } | null;
   highestRelativeEffort: { activity: PrActivity; value: number } | null;
-  bestPace5k: { activity: PrActivity; paceSecPerKm: number } | null;
-  bestPace10k: { activity: PrActivity; paceSecPerKm: number } | null;
+  /** Pace stored as minutes per km (same unit as Activity.averagePace) */
+  bestPace5k: { activity: PrActivity; paceMinPerKm: number } | null;
+  bestPace10k: { activity: PrActivity; paceMinPerKm: number } | null;
   mostCalories: { activity: PrActivity; calories: number } | null;
 }
 
@@ -100,12 +101,12 @@ export function computePersonalRecords(activities: Activity[]): PersonalRecords 
 
   for (const a of runs) {
     const pace5k = bestPaceOverDistance(a, 5000);
-    if (pace5k && (!bestPace5k || pace5k < bestPace5k.paceSecPerKm)) {
-      bestPace5k = { activity: toPrActivity(a), paceSecPerKm: pace5k };
+    if (pace5k && (!bestPace5k || pace5k < bestPace5k.paceMinPerKm)) {
+      bestPace5k = { activity: toPrActivity(a), paceMinPerKm: pace5k };
     }
     const pace10k = bestPaceOverDistance(a, 10000);
-    if (pace10k && (!bestPace10k || pace10k < bestPace10k.paceSecPerKm)) {
-      bestPace10k = { activity: toPrActivity(a), paceSecPerKm: pace10k };
+    if (pace10k && (!bestPace10k || pace10k < bestPace10k.paceMinPerKm)) {
+      bestPace10k = { activity: toPrActivity(a), paceMinPerKm: pace10k };
     }
   }
 

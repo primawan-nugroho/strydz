@@ -18,8 +18,11 @@ export function getAthlete(accessToken: string) {
   return stravaFetch<StravaAthlete>("/athlete", accessToken);
 }
 
-export function listActivities(accessToken: string, perPage = 20) {
-  return stravaFetch<StravaActivity[]>(`/athlete/activities?per_page=${perPage}`, accessToken);
+export function listActivities(accessToken: string, perPage = 20, page = 1) {
+  return stravaFetch<StravaActivity[]>(
+    `/athlete/activities?per_page=${perPage}&page=${page}`,
+    accessToken
+  );
 }
 
 export function getActivityDetail(accessToken: string, id: string) {
