@@ -33,6 +33,16 @@ export default function DashboardLoading() {
         </div>
       </div>
 
+      {/* Weekly digest */}
+      <div className="bg-surface-2 rounded-2xl p-4 mb-3">
+        <Skeleton className="h-3 w-20 mb-3" />
+        <div className="space-y-2">
+          <Skeleton className="h-3 w-full" />
+          <Skeleton className="h-3 w-11/12" />
+          <Skeleton className="h-3 w-4/5" />
+        </div>
+      </div>
+
       {/* Next training banner */}
       <Skeleton className="h-16 w-full rounded-2xl mb-4" />
 

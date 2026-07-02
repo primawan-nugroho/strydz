@@ -2,17 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { getActivityDetail, getActivities } from "@/lib/activities";
 import { computeActivityInsight, getRelativeEffort, computeTrainingLoad } from "@/lib/insights";
 import { withCache } from "@/lib/strava/cache";
+import { generateCoachText, isCoachConfigured } from "@/lib/coach/provider";
 
 const COACH_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours per activity
-
-// Provider-agnostic: any OpenAI-compatible chat-completions API works.
-// Groq:       https://api.groq.com/openai/v1       llama-3.1-8b-instant
-// Mistral:    https://api.mistral.ai/v1            mistral-small-latest
-// Cerebras:   https://api.cerebras.ai/v1           llama3.1-8b
-// OpenRouter: https://openrouter.ai/api/v1         meta-llama/llama-3.1-8b-instruct:free
-const API_BASE_URL = process.env.AI_API_BASE_URL ?? "https://api.groq.com/openai/v1";
-const API_KEY = process.env.AI_API_KEY;
-const MODEL = process.env.AI_MODEL ?? "llama-3.1-8b-instant";
 
 const SYSTEM_PROMPT = `You are a warm but direct running and endurance coach.
 Write 3–4 sentences of specific, data-driven feedback about the activity.
@@ -92,7 +84,7 @@ export async function GET(
 ) {
   const { id } = await params;
 
-  if (!API_KEY) {
+  if (!isCoachConfigured()) {
     return NextResponse.json({ error: "AI_API_KEY not configured" }, { status: 503 });
   }
 
@@ -106,33 +98,7 @@ export async function GET(
       if (!activity) throw new Error("Activity not found");
 
       const prompt = buildPrompt(activity, allActivities);
-
-      const res = await fetch(`${API_BASE_URL}/chat/completions`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${API_KEY}`,
-        },
-        body: JSON.stringify({
-          model: MODEL,
-          messages: [
-            { role: "system", content: SYSTEM_PROMPT },
-            { role: "user", content: prompt },
-          ],
-          max_tokens: 220,
-          temperature: 0.7,
-        }),
-      });
-
-      if (!res.ok) {
-        const body = await res.text().catch(() => "");
-        throw new Error(`AI API ${res.status}: ${body.slice(0, 500)}`);
-      }
-
-      const data = await res.json();
-      const text: string | undefined = data.choices?.[0]?.message?.content?.trim();
-      if (!text) throw new Error("Empty response from AI API");
-      return text;
+      return generateCoachText(SYSTEM_PROMPT, prompt, 220);
     });
 
     return NextResponse.json({ narrative });

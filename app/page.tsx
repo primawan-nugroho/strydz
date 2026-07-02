@@ -15,6 +15,7 @@ import RouteThumbnail from "@/components/RouteThumbnail";
 import Logo from "@/components/Logo";
 import Greeting from "@/components/Greeting";
 import Avatar from "@/components/Avatar";
+import WeeklyDigest from "@/components/WeeklyDigest";
 import InfoTooltip from "@/components/InfoTooltip";
 import RatingBadge from "@/components/RatingBadge";
 import { TONE_TEXT } from "@/lib/insights/benchmarks";
@@ -106,6 +107,8 @@ export default async function DashboardPage() {
           <RatingBadge rating={acwrRating} />
         </div>
       </div>
+
+      {enoughData && <WeeklyDigest />}
 
       <Link
         href="/insights"

@@ -43,7 +43,27 @@ data interface, so no UI code should change when the data source is swapped.
   always returns `null` for `fitnessScore`/`freshnessScore`/`powerCurve`, which correctly resolves
   through `lib/insights`' computed-fallback path — this is the premium graceful-degradation design
   doing exactly what it was built for, just triggered by an API gap rather than a free account.
+- **Strava API now requires a paid Strava subscription for the app owner.** Strava changed policy in
+  2025 so a registered API application shows `Application Status: Inactive` (every call 403s,
+  including `/athlete`) unless the developer account has an active Strava subscription. This is
+  unrelated to OAuth scope or callback domain config — check `strava.com/settings/api` for a
+  "subscriber-only" banner before debugging token/scope issues.
 - No database. Tokens live in cookies only.
+
+## AI coach
+
+- `lib/coach/provider.ts` wraps a **provider-agnostic** OpenAI-compatible chat-completions call —
+  `generateCoachText(systemPrompt, userPrompt, maxTokens)`. Configured via env vars: `AI_API_KEY`
+  (required), `AI_API_BASE_URL` (default `https://api.groq.com/openai/v1`), `AI_MODEL` (default
+  `llama-3.1-8b-instant`). Swapping providers (Mistral, Cerebras, OpenRouter, etc.) is a env-var-only
+  change, no code change — any endpoint that speaks the OpenAI chat-completions shape works.
+- **Do not default to Google Gemini.** Its free tier grants `limit: 0` quota (HTTP 429
+  `RESOURCE_EXHAUSTED`) in some regions (observed: Indonesia) regardless of a valid API key — this
+  is a silent regional gate, not a usage cap. Groq's free tier has no such restriction.
+- Two endpoints: `app/api/coach/[id]/route.ts` (per-activity narrative, 24h cache per activity) and
+  `app/api/coach-digest/route.ts` (weekly summary, 24h cache per athlete+ISO-week, shown on the
+  dashboard via `WeeklyDigest`). Both fail closed — the client component hides itself on a 503
+  (no key configured) and shows nothing on other errors rather than breaking the page.
 
 ## Insights engine
 
