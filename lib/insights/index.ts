@@ -124,15 +124,49 @@ export function computeNextTraining(activities: Activity[]): NextTraining {
   };
 }
 
+/** Splits the activity into per-segment paces (min/km) using the distance/time streams.
+ * Segment paces are what runners mean by "consistency" — instantaneous GPS pace is far too
+ * noisy to judge it. */
+function computeSplitPaces(activity: Activity, splitMeters = 1000): number[] {
+  const track = activity.streams.filter((p) => p.distance != null);
+  if (track.length < 2) return [];
+
+  const splits: number[] = [];
+  let segStartT = track[0].t;
+  let segStartDist = track[0].distance;
+
+  for (const p of track) {
+    const dist = p.distance - segStartDist;
+    if (dist >= splitMeters) {
+      const minutes = (p.t - segStartT) / 60;
+      splits.push(minutes / (dist / 1000));
+      segStartT = p.t;
+      segStartDist = p.distance;
+    }
+  }
+  // Include a meaningful final partial split (at least half length) so short activities
+  // aren't judged on one segment fewer than they earned.
+  const last = track[track.length - 1];
+  const tailDist = last.distance - segStartDist;
+  if (tailDist >= splitMeters / 2) {
+    const minutes = (last.t - segStartT) / 60;
+    splits.push(minutes / (tailDist / 1000));
+  }
+  return splits;
+}
+
 export function computeActivityInsight(activity: Activity): ActivityInsight {
-  // Consistency = 100 − coefficient of variation of pace. Raw per-second GPS pace is noisy
-  // and a single stop (pace → 20+ min/km) unfairly tanks the score, so samples are clamped
-  // to the 5th–95th percentile before computing the CV.
-  const rawPaces = activity.streams.map((p) => p.pace).filter((p): p is number => p != null);
-  const sorted = [...rawPaces].sort((a, b) => a - b);
-  const p5 = sorted[Math.floor(sorted.length * 0.05)] ?? 0;
-  const p95 = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.95))] ?? 0;
-  const paces = rawPaces.map((p) => Math.min(Math.max(p, p5), p95));
+  // Consistency = 100 − coefficient of variation of per-km split paces. Splits absorb GPS
+  // noise and brief stops; a metronomic run scores in the 90s, a strong fade or walk/run
+  // mix lands much lower. Falls back to clamped raw samples when there are too few splits.
+  let paces = computeSplitPaces(activity);
+  if (paces.length < 3) {
+    const rawPaces = activity.streams.map((p) => p.pace).filter((p): p is number => p != null);
+    const sorted = [...rawPaces].sort((a, b) => a - b);
+    const p5 = sorted[Math.floor(sorted.length * 0.05)] ?? 0;
+    const p95 = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.95))] ?? 0;
+    paces = rawPaces.map((p) => Math.min(Math.max(p, p5), p95));
+  }
   const mean = paces.reduce((sum, p) => sum + p, 0) / (paces.length || 1);
   const variance = paces.reduce((sum, p) => sum + (p - mean) ** 2, 0) / (paces.length || 1);
   const stdDev = Math.sqrt(variance);

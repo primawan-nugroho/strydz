@@ -23,10 +23,18 @@ function formatPace(minPerKm: number) {
 }
 
 export default function ActivityCharts({ streams }: { streams: StreamPoint[] }) {
+  // GPS stops/glitches produce huge pace spikes (20+ min/km) that crush the rest of the
+  // line into a flat band. Cap pace at the 95th percentile so the graph stays readable.
+  const paceValues = streams
+    .map((p) => p.pace)
+    .filter((p): p is number => p != null)
+    .sort((a, b) => a - b);
+  const paceCap = paceValues[Math.floor(paceValues.length * 0.95)] ?? Infinity;
+
   const data = streams.map((p) => ({
     t: p.t,
     label: minutesLabel(p.t),
-    pace: p.pace,
+    pace: p.pace != null ? Math.min(p.pace, paceCap) : null,
     heartrate: p.heartrate,
     elevation: p.elevation,
   }));
