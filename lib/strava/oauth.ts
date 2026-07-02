@@ -8,7 +8,10 @@ export function buildAuthorizeUrl(): string {
     client_id: process.env.STRAVA_CLIENT_ID!,
     redirect_uri: process.env.STRAVA_REDIRECT_URI!,
     response_type: "code",
-    approval_prompt: "auto",
+    // "force" always re-shows the consent screen. With "auto", Strava silently reuses a
+    // previous grant — if that grant was read-only (e.g. from the seed-token flow), the new
+    // token comes back without activity:read_all and /athlete/activities 401s.
+    approval_prompt: "force",
     scope: "read,activity:read_all",
   });
   return `${AUTHORIZE_URL}?${params.toString()}`;

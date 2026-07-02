@@ -8,6 +8,8 @@ const ERROR_MESSAGES: Record<string, string> = {
   exchange_failed: "Couldn't complete sign-in with Strava. Try again.",
   no_seed: "No seed token configured in .env.local.",
   seed_failed: "Seed token was rejected by Strava — it may have expired.",
+  missing_scope:
+    "Strava didn't grant activity access. When connecting, keep “View data about your activities” checked, then try again.",
 };
 
 export default async function SettingsPage({
