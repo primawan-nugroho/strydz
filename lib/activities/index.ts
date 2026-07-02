@@ -32,6 +32,7 @@ export async function getDashboardData(): Promise<{
   athlete: Athlete;
   activities: Activity[];
   source: DataSource;
+  errorDetail?: string;
 }> {
   const session = await getStravaSession();
   if (!session) {
@@ -47,8 +48,14 @@ export async function getDashboardData(): Promise<{
     }
     return { athlete, activities: liveActivities, source: "live" };
   } catch (err) {
-    console.error("Strava dashboard fetch failed, falling back to demo data:", err);
-    return { athlete: await getSampleAthlete(), activities: await getSampleActivities(), source: "demo" };
+    const errorDetail = err instanceof Error ? err.message : String(err);
+    console.error("Strava dashboard fetch failed, falling back to demo data:", errorDetail);
+    return {
+      athlete: await getSampleAthlete(),
+      activities: await getSampleActivities(),
+      source: "demo",
+      errorDetail,
+    };
   }
 }
 

@@ -19,7 +19,7 @@ export default async function SettingsPage({
 }) {
   const params = await searchParams;
   const connected = await isLiveMode();
-  const { athlete, source } = await getDashboardData();
+  const { athlete, source, errorDetail } = await getDashboardData();
   const liveDataWorking = source === "live";
   const errorMessage = params.strava_error ? ERROR_MESSAGES[params.strava_error] : null;
 
@@ -41,8 +41,17 @@ export default async function SettingsPage({
       {connected && !liveDataWorking && (
         <div className="bg-surface-2 rounded-2xl p-3.5 mb-3 flex items-start gap-2 text-[13px] text-accent-text">
           <TriangleAlert size={16} className="shrink-0 mt-0.5" />
-          Connected, but activities couldn&apos;t be loaded — likely missing the
-          activity:read_all scope. Showing demo data until reconnected with full access.
+          <div>
+            <p>
+              Connected, but activities couldn&apos;t be loaded. Showing demo data until this
+              resolves.
+            </p>
+            {errorDetail && (
+              <p className="mt-1 text-[11px] text-text-muted font-mono break-all">
+                {errorDetail}
+              </p>
+            )}
+          </div>
         </div>
       )}
 
