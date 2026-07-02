@@ -1,4 +1,4 @@
-import { getActivities, getCurrentAthlete } from "@/lib/activities";
+import { getAllActivities } from "@/lib/activities";
 import {
   computePersonalRecords,
   computeWeeklyVolumeTrend,
@@ -54,8 +54,7 @@ function PrCard({ icon, label, value, sub, activityId, activityName, activityDat
 }
 
 export default async function RecordsPage() {
-  const athlete = await getCurrentAthlete();
-  const activities = await getActivities(athlete.id);
+  const activities = await getAllActivities();
 
   const prs = computePersonalRecords(activities);
   const volumeTrend = computeWeeklyVolumeTrend(activities, 12);

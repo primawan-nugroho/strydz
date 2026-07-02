@@ -16,6 +16,12 @@ function minutesLabel(seconds: number) {
   return `${Math.round(seconds / 60)}m`;
 }
 
+function formatPace(minPerKm: number) {
+  const min = Math.floor(minPerKm);
+  const sec = Math.round((minPerKm - min) * 60);
+  return `${min}:${String(sec).padStart(2, "0")} /km`;
+}
+
 export default function ActivityCharts({ streams }: { streams: StreamPoint[] }) {
   const data = streams.map((p) => ({
     t: p.t,
@@ -51,7 +57,12 @@ export default function ActivityCharts({ streams }: { streams: StreamPoint[] }) 
             <LineChart data={data} margin={{ top: 4, right: 4, left: 4, bottom: 0 }}>
               <XAxis dataKey="label" hide />
               <YAxis hide reversed domain={["dataMin - 0.5", "dataMax + 0.5"]} />
-              <Tooltip contentStyle={{ fontSize: 12, borderRadius: 8 }} />
+              <Tooltip
+                contentStyle={{ fontSize: 12, borderRadius: 8 }}
+                labelFormatter={(l) => `at ${l}`}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={(v: any) => [formatPace(Number(v)), "pace"] as any}
+              />
               <Line type="monotone" dataKey="pace" stroke="#185fa5" strokeWidth={2} dot={false} />
             </LineChart>
           </ResponsiveContainer>

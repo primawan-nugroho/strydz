@@ -1,6 +1,6 @@
 /** Tiny haptic tap for key interactions. Supported on Android Chrome; iOS Safari and
  * desktops silently no-op. Call from client components only. */
-export function haptic(durationMs = 10) {
+export function haptic(durationMs = 3) {
   if (typeof navigator !== "undefined" && "vibrate" in navigator) {
     try {
       navigator.vibrate(durationMs);

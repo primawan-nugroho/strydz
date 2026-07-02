@@ -12,6 +12,7 @@ import type {
 } from "./types";
 
 const ASSUMED_MAX_HR = 190;
+const ASSUMED_REST_HR = 60;
 
 function activityLoad(activity: Activity): number {
   const minutes = activity.movingSeconds / 60;
@@ -124,7 +125,14 @@ export function computeNextTraining(activities: Activity[]): NextTraining {
 }
 
 export function computeActivityInsight(activity: Activity): ActivityInsight {
-  const paces = activity.streams.map((p) => p.pace).filter((p): p is number => p != null);
+  // Consistency = 100 − coefficient of variation of pace. Raw per-second GPS pace is noisy
+  // and a single stop (pace → 20+ min/km) unfairly tanks the score, so samples are clamped
+  // to the 5th–95th percentile before computing the CV.
+  const rawPaces = activity.streams.map((p) => p.pace).filter((p): p is number => p != null);
+  const sorted = [...rawPaces].sort((a, b) => a - b);
+  const p5 = sorted[Math.floor(sorted.length * 0.05)] ?? 0;
+  const p95 = sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * 0.95))] ?? 0;
+  const paces = rawPaces.map((p) => Math.min(Math.max(p, p5), p95));
   const mean = paces.reduce((sum, p) => sum + p, 0) / (paces.length || 1);
   const variance = paces.reduce((sum, p) => sum + (p - mean) ** 2, 0) / (paces.length || 1);
   const stdDev = Math.sqrt(variance);
@@ -158,16 +166,53 @@ export function computeActivityInsight(activity: Activity): ActivityInsight {
   return { paceConsistencyPercent, elevationAdjustedEffort, hrZones };
 }
 
+/** Banister TRIMP: per-sample `minutes × HRr × 0.64 × e^(1.92·HRr)` where HRr is heart-rate
+ * reserve. Exponential weighting means a threshold hour scores ~2.5× an easy hour (the old
+ * quadratic version only managed ~1.6×, understating hard sessions). HRrest/HRmax are
+ * population assumptions — good enough for trends, could become per-user settings later.
+ * Scaled to roughly line up with Strava's suffer-score bands in benchmarks.ts. */
 export function getRelativeEffort(activity: Activity): RelativeEffortResult {
   if (activity.premium.relativeEffort != null) {
     return { value: activity.premium.relativeEffort, source: "strava-premium" };
   }
   const hrPoints = activity.streams.map((p) => p.heartrate).filter((h): h is number => h != null);
+  if (hrPoints.length === 0) return { value: 0, source: "computed-fallback" };
+
+  const minutesPerSample = activity.movingSeconds / 60 / hrPoints.length;
+  const hrRange = ASSUMED_MAX_HR - ASSUMED_REST_HR;
   const trimp = hrPoints.reduce((sum, hr) => {
-    const ratio = hr / ASSUMED_MAX_HR;
-    return sum + ratio * ratio * (activity.movingSeconds / 60 / (hrPoints.length || 1));
+    const hrr = Math.min(1, Math.max(0, (hr - ASSUMED_REST_HR) / hrRange));
+    return sum + minutesPerSample * hrr * 0.64 * Math.exp(1.92 * hrr);
   }, 0);
-  return { value: Math.round(trimp * 10), source: "computed-fallback" };
+  return { value: Math.round(trimp), source: "computed-fallback" };
+}
+
+/** Best average pace sustained over a given duration, found by sliding a time window over
+ * the time/distance streams and taking the max distance covered inside it. Returns min/km,
+ * or null if the activity is shorter than the window. */
+function bestPaceOverDuration(
+  points: { t: number; distance: number }[],
+  windowSeconds: number
+): number | null {
+  if (points.length < 2) return null;
+  const totalTime = points[points.length - 1].t - points[0].t;
+  if (totalTime < windowSeconds) return null;
+
+  let bestDistance = 0;
+  let lo = 0;
+  for (let hi = 1; hi < points.length; hi++) {
+    while (points[hi].t - points[lo].t > windowSeconds) lo++;
+    const span = points[hi].t - points[lo].t;
+    if (span < windowSeconds * 0.9) continue; // window not yet full
+    const dist = points[hi].distance - points[lo].distance;
+    // Normalize to the exact window length so shorter spans don't win unfairly
+    const normalized = dist * (windowSeconds / span);
+    if (normalized > bestDistance) bestDistance = normalized;
+  }
+
+  if (bestDistance <= 0) return null;
+  const paceMinPerKm = windowSeconds / 60 / (bestDistance / 1000);
+  return Number(paceMinPerKm.toFixed(2));
 }
 
 export function getEffortCurve(activity: Activity): EffortCurveResult {
@@ -178,18 +223,22 @@ export function getEffortCurve(activity: Activity): EffortCurveResult {
       source: "strava-premium",
     };
   }
-  const paces = activity.streams.map((p) => p.pace).filter((p): p is number => p != null);
-  const best = paces.length ? Math.min(...paces) : 0;
+  // True best-effort curve computed from the streams (the old version multiplied the single
+  // fastest GPS sample by made-up factors — decorative, not real data).
+  const track = activity.streams
+    .filter((p) => p.distance != null)
+    .map((p) => ({ t: p.t, distance: p.distance }));
+
   const windows = [
-    { duration: "1min", factor: 1.0 },
-    { duration: "5min", factor: 1.08 },
-    { duration: "20min", factor: 1.2 },
+    { duration: "1min", seconds: 60 },
+    { duration: "5min", seconds: 300 },
+    { duration: "20min", seconds: 1200 },
   ];
-  return {
-    points: windows.map((w) => ({ duration: w.duration, value: Number((best * w.factor).toFixed(2)) })),
-    metric: "pace",
-    source: "computed-fallback",
-  };
+  const points = windows
+    .map((w) => ({ duration: w.duration, value: bestPaceOverDuration(track, w.seconds) }))
+    .filter((p): p is { duration: string; value: number } => p.value != null);
+
+  return { points, metric: "pace", source: "computed-fallback" };
 }
 
 export function getSegmentPerformance(activity: Activity): SegmentPerformanceResult {

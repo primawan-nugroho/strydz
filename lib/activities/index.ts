@@ -85,6 +85,29 @@ export async function getActivities(_athleteId?: string): Promise<Activity[]> {
 }
 
 const PAGE_SIZE = 20;
+const ALL_PAGE_SIZE = 100;
+const ALL_MAX_PAGES = 5; // 500 activities — rate-limit safety cap
+
+/** Full history fetch for records/PR analysis: pages through Strava at 100/page until an
+ * empty page (capped). The underlying per-page calls are cached, so repeat visits within
+ * the cache TTL cost no extra API quota. Falls back to whatever loaded on error. */
+export async function getAllActivities(): Promise<Activity[]> {
+  const session = await getStravaSession();
+  if (!session) return getSampleActivities();
+
+  const all: Activity[] = [];
+  try {
+    for (let page = 1; page <= ALL_MAX_PAGES; page++) {
+      const batch = await getActivitiesLive(session, page, ALL_PAGE_SIZE);
+      all.push(...batch);
+      if (batch.length < ALL_PAGE_SIZE) break;
+    }
+  } catch (err) {
+    console.error("Strava getAllActivities failed on page fetch:", err);
+    if (all.length === 0) return getSampleActivities();
+  }
+  return all.length > 0 ? all : getSampleActivities();
+}
 
 /** Paginated fetch — used by the /api/activities route for "load more". */
 export async function getActivitiesPage(page: number): Promise<Activity[]> {
