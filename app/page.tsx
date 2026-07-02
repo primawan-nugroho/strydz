@@ -112,7 +112,7 @@ export default async function DashboardPage() {
 
       <Link
         href="/insights"
-        className="block bg-accent-bg rounded-2xl p-3.5 mb-4 flex items-center gap-3"
+        className="pressable block bg-accent-bg rounded-2xl p-3.5 mb-4 flex items-center gap-3"
       >
         <Route size={22} className="text-accent-text shrink-0" />
         <div>
@@ -127,7 +127,7 @@ export default async function DashboardPage() {
           <Link
             key={activity.id}
             href={`/activities/${activity.id}`}
-            className="bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
+            className="pressable bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
           >
             <div className="flex items-center gap-2.5">
               <div className="w-[34px] h-[34px] rounded-[10px] bg-accent-bg flex items-center justify-center overflow-hidden">

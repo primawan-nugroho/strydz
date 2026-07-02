@@ -96,4 +96,31 @@ body {
   background: var(--background);
   color: var(--text-primary);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  /* Kill the grey tap-flash so our own pressed states are the only feedback. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Shared press feedback for anything tappable: instant shrink on touch, quick spring back.
+ * Applied via the `pressable` class on buttons, links, and interactive cards. */
+@utility pressable {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  &:active {
+    transform: scale(0.97);
+    opacity: 0.85;
+  }
+}
+
+/* Stronger variant for small controls (nav icons, dots) where 3% is invisible. */
+@utility pressable-strong {
+  transition: transform 0.1s ease;
+  &:active {
+    transform: scale(0.88);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pressable:active,
+  .pressable-strong:active {
+    transform: none;
+  }
 }

@@ -34,7 +34,7 @@ interface PrCardProps {
 
 function PrCard({ icon, label, value, sub, activityId, activityName, activityDate }: PrCardProps) {
   return (
-    <div className="bg-surface-2 rounded-2xl p-4">
+    <div className="pressable bg-surface-2 rounded-2xl p-4">
       <div className="flex items-center gap-2 mb-2">
         <span className="text-accent-text">{icon}</span>
         <p className="text-xs text-text-muted">{label}</p>

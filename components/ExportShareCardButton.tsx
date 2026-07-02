@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Download, Loader2 } from "lucide-react";
 import { downloadBlob, renderShareCardPng, SHARE_CARD_LAYOUTS } from "@/lib/export/shareCard";
 import ExportPreviewModal from "@/components/ExportPreviewModal";
+import { haptic } from "@/lib/haptics";
 import type { Activity } from "@/lib/activities/types";
 
 interface RenderedLayout {
@@ -21,6 +22,7 @@ export default function ExportShareCardButton({ activity }: { activity: Activity
   const sessionRef = useRef(0);
 
   async function handleClick() {
+    haptic();
     setBusy(true);
     setError(false);
     const session = ++sessionRef.current;
@@ -99,7 +101,7 @@ export default function ExportShareCardButton({ activity }: { activity: Activity
         type="button"
         onClick={handleClick}
         disabled={busy}
-        className="w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5 disabled:opacity-60"
+        className="pressable w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5 disabled:opacity-60"
       >
         {busy ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
         {busy ? "Generating preview…" : "Export route as PNG"}

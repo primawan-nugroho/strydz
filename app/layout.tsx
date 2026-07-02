@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
+import { ViewTransition } from "react";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
+import PullToRefresh from "@/components/PullToRefresh";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 import { THEME_INIT_SCRIPT } from "@/lib/theme";
 
@@ -41,7 +43,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col antialiased">
         <div className="flex flex-col flex-1 mx-auto w-full max-w-md min-h-screen bg-background relative">
-          <main className="flex-1 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-28">{children}</main>
+          <PullToRefresh />
+          <main className="flex-1 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-28">
+            <ViewTransition>{children}</ViewTransition>
+          </main>
           <BottomNav />
         </div>
         <ServiceWorkerRegister />

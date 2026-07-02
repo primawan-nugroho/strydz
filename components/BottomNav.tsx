@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Home, BarChart3, Lightbulb, Settings, Trophy } from "lucide-react";
+import { haptic } from "@/lib/haptics";
 
 const items = [
   { href: "/", label: "Home", icon: Home },
@@ -14,6 +16,13 @@ const items = [
 
 export default function BottomNav() {
   const pathname = usePathname();
+  // Optimistic active tab: highlight the tapped tab immediately instead of waiting for
+  // the route change to commit (usePathname only updates after navigation).
+  const [pending, setPending] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPending(null); // route committed — fall back to pathname-driven highlight
+  }, [pathname]);
 
   return (
     <nav
@@ -21,12 +30,17 @@ export default function BottomNav() {
       style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
     >
       {items.map(({ href, label, icon: Icon }) => {
-        const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+        const routeActive = href === "/" ? pathname === "/" : pathname.startsWith(href);
+        const active = pending != null ? pending === href : routeActive;
         return (
           <Link
             key={href}
             href={href}
-            className="flex flex-col items-center gap-1 px-2 py-1"
+            onClick={() => {
+              haptic();
+              setPending(href);
+            }}
+            className="pressable-strong flex flex-col items-center gap-1 px-2 py-1"
           >
             <Icon
               size={20}

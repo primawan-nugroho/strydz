@@ -54,7 +54,7 @@ export default function LoadMoreActivities({
           <Link
             key={activity.id}
             href={`/activities/${activity.id}`}
-            className="bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
+            className="pressable bg-surface-2 rounded-2xl p-3 flex items-center justify-between"
           >
             <div className="flex items-center gap-2.5">
               <div className="w-[34px] h-[34px] rounded-[10px] bg-accent-bg flex items-center justify-center overflow-hidden">
@@ -78,7 +78,7 @@ export default function LoadMoreActivities({
           type="button"
           onClick={loadMore}
           disabled={loading}
-          className="w-full mt-3 flex items-center justify-center gap-2 rounded-full border border-border text-[13px] font-medium py-2.5 disabled:opacity-60"
+          className="pressable w-full mt-3 flex items-center justify-center gap-2 rounded-full border border-border text-[13px] font-medium py-2.5 disabled:opacity-60"
         >
           {loading ? (
             <>

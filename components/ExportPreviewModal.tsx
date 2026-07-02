@@ -120,7 +120,7 @@ export default function ExportPreviewModal({
           <button
             type="button"
             onClick={onCancel}
-            className="flex-1 rounded-full border border-border text-[13px] font-medium py-2.5"
+            className="pressable flex-1 rounded-full border border-border text-[13px] font-medium py-2.5"
           >
             Cancel
           </button>
@@ -128,7 +128,7 @@ export default function ExportPreviewModal({
             <button
               type="button"
               onClick={() => onShare(index)}
-              className="flex-1 flex items-center justify-center gap-2 rounded-full border border-border text-[13px] font-medium py-2.5"
+              className="pressable flex-1 flex items-center justify-center gap-2 rounded-full border border-border text-[13px] font-medium py-2.5"
             >
               <Share size={16} /> Share
             </button>
@@ -136,7 +136,7 @@ export default function ExportPreviewModal({
           <button
             type="button"
             onClick={() => onDownload(index)}
-            className="flex-1 flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
+            className="pressable flex-1 flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
           >
             <Download size={16} /> Download
           </button>

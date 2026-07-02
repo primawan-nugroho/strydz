@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Monitor, Sun, Moon } from "lucide-react";
 import { applyTheme, THEME_STORAGE_KEY, type ThemePreference } from "@/lib/theme";
+import { haptic } from "@/lib/haptics";
 
 const OPTIONS: { value: ThemePreference; label: string; icon: typeof Sun }[] = [
   { value: "system", label: "System", icon: Monitor },
@@ -19,6 +20,7 @@ export default function ThemeToggle() {
   }, []);
 
   function select(value: ThemePreference) {
+    haptic();
     setTheme(value);
     if (value === "system") {
       localStorage.removeItem(THEME_STORAGE_KEY);
@@ -37,7 +39,7 @@ export default function ThemeToggle() {
             key={value}
             type="button"
             onClick={() => select(value)}
-            className={`flex-1 flex items-center justify-center gap-1.5 rounded-full py-2 text-[12px] font-medium transition-colors ${
+            className={`pressable flex-1 flex items-center justify-center gap-1.5 rounded-full py-2 text-[12px] font-medium transition-colors ${
               active ? "bg-accent-bg text-accent-text" : "text-text-muted"
             }`}
           >

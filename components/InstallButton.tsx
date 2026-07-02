@@ -79,7 +79,7 @@ export default function InstallButton() {
       <button
         type="button"
         onClick={handleInstall}
-        className="w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
+        className="pressable w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
       >
         <Download size={16} /> Add STRYDZ to home screen
       </button>

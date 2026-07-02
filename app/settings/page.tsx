@@ -1,6 +1,7 @@
 import { getDashboardData, isLiveMode } from "@/lib/activities";
 import ThemeToggle from "@/components/ThemeToggle";
 import InstallButton from "@/components/InstallButton";
+import PendingSubmitButton from "@/components/PendingSubmitButton";
 import { LogIn, LogOut, Zap, CircleAlert, TriangleAlert } from "lucide-react";
 
 const ERROR_MESSAGES: Record<string, string> = {
@@ -65,28 +66,28 @@ export default async function SettingsPage({
 
         {connected ? (
           <form action="/api/strava/disconnect" method="POST">
-            <button
-              type="submit"
+            <PendingSubmitButton
+              pendingLabel="Disconnecting…"
               className="w-full flex items-center justify-center gap-2 rounded-full bg-surface-1 border border-border text-[13px] font-medium py-2.5"
             >
               <LogOut size={16} /> Disconnect Strava
-            </button>
+            </PendingSubmitButton>
           </form>
         ) : (
           <div className="flex flex-col gap-2">
             <a
               href="/api/strava/authorize"
-              className="w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
+              className="pressable w-full flex items-center justify-center gap-2 rounded-full bg-accent-bg text-accent-text text-[13px] font-medium py-2.5"
             >
               <LogIn size={16} /> Connect Strava account
             </a>
             <form action="/api/strava/seed" method="POST">
-              <button
-                type="submit"
+              <PendingSubmitButton
+                pendingLabel="Connecting…"
                 className="w-full flex items-center justify-center gap-2 rounded-full bg-surface-1 border border-border text-text-secondary text-[12px] font-medium py-2"
               >
                 <Zap size={14} /> Quick-connect with dev seed token
-              </button>
+              </PendingSubmitButton>
             </form>
           </div>
         )}
