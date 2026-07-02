@@ -1,11 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenAI } from "@google/genai";
 import { getActivityDetail, getActivities } from "@/lib/activities";
 import { computeActivityInsight, getRelativeEffort, computeTrainingLoad } from "@/lib/insights";
 import { withCache } from "@/lib/strava/cache";
 
 const COACH_TTL_MS = 24 * 60 * 60 * 1000; // 24 hours per activity
-const MODEL = "gemini-2.0-flash-lite";
+
+// Provider-agnostic: any OpenAI-compatible chat-completions API works.
+// Groq:       https://api.groq.com/openai/v1       llama-3.1-8b-instant
+// Mistral:    https://api.mistral.ai/v1            mistral-small-latest
+// Cerebras:   https://api.cerebras.ai/v1           llama3.1-8b
+// OpenRouter: https://openrouter.ai/api/v1         meta-llama/llama-3.1-8b-instruct:free
+const API_BASE_URL = process.env.AI_API_BASE_URL ?? "https://api.groq.com/openai/v1";
+const API_KEY = process.env.AI_API_KEY;
+const MODEL = process.env.AI_MODEL ?? "llama-3.1-8b-instant";
 
 const SYSTEM_PROMPT = `You are a warm but direct running and endurance coach.
 Write 3–4 sentences of specific, data-driven feedback about the activity.
@@ -85,8 +92,8 @@ export async function GET(
 ) {
   const { id } = await params;
 
-  if (!process.env.GEMINI_API_KEY) {
-    return NextResponse.json({ error: "GEMINI_API_KEY not configured" }, { status: 503 });
+  if (!API_KEY) {
+    return NextResponse.json({ error: "AI_API_KEY not configured" }, { status: 503 });
   }
 
   try {
@@ -100,19 +107,31 @@ export async function GET(
 
       const prompt = buildPrompt(activity, allActivities);
 
-      const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
-      const response = await ai.models.generateContent({
-        model: MODEL,
-        contents: prompt,
-        config: {
-          systemInstruction: SYSTEM_PROMPT,
-          maxOutputTokens: 220,
-          temperature: 0.7,
+      const res = await fetch(`${API_BASE_URL}/chat/completions`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${API_KEY}`,
         },
+        body: JSON.stringify({
+          model: MODEL,
+          messages: [
+            { role: "system", content: SYSTEM_PROMPT },
+            { role: "user", content: prompt },
+          ],
+          max_tokens: 220,
+          temperature: 0.7,
+        }),
       });
 
-      const text = response.text;
-      if (!text) throw new Error("Empty response from Gemini");
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(`AI API ${res.status}: ${body.slice(0, 500)}`);
+      }
+
+      const data = await res.json();
+      const text: string | undefined = data.choices?.[0]?.message?.content?.trim();
+      if (!text) throw new Error("Empty response from AI API");
       return text;
     });
 
