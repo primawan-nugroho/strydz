@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Download, Loader2 } from "lucide-react";
 import { downloadBlob, renderShareCardPng, SHARE_CARD_LAYOUTS } from "@/lib/export/shareCard";
 import ExportPreviewModal from "@/components/ExportPreviewModal";
@@ -17,26 +17,44 @@ export default function ExportShareCardButton({ activity }: { activity: Activity
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(false);
   const [layouts, setLayouts] = useState<RenderedLayout[] | null>(null);
+  // Bumped when the preview closes so in-flight background renders know to stop appending.
+  const sessionRef = useRef(0);
 
   async function handleClick() {
     setBusy(true);
     setError(false);
+    const session = ++sessionRef.current;
+
     try {
-      const rendered = await Promise.all(
-        SHARE_CARD_LAYOUTS.map(async (layout) => {
+      // Render the first layout and open the preview immediately...
+      const first = SHARE_CARD_LAYOUTS[0];
+      const firstBlob = await renderShareCardPng(activity, first.id);
+      if (sessionRef.current !== session) return;
+      setLayouts([{ id: first.id, label: first.label, blob: firstBlob, url: URL.createObjectURL(firstBlob) }]);
+      setBusy(false);
+
+      // ...then fill in the remaining layouts in the background as they finish.
+      for (const layout of SHARE_CARD_LAYOUTS.slice(1)) {
+        try {
           const blob = await renderShareCardPng(activity, layout.id);
-          return { id: layout.id, label: layout.label, blob, url: URL.createObjectURL(blob) };
-        })
-      );
-      setLayouts(rendered);
+          if (sessionRef.current !== session) return;
+          setLayouts((prev) =>
+            prev
+              ? [...prev, { id: layout.id, label: layout.label, blob, url: URL.createObjectURL(blob) }]
+              : prev
+          );
+        } catch {
+          // Skip a layout that fails to render rather than killing the whole preview.
+        }
+      }
     } catch {
       setError(true);
-    } finally {
       setBusy(false);
     }
   }
 
   function closePreview() {
+    sessionRef.current++;
     layouts?.forEach((l) => URL.revokeObjectURL(l.url));
     setLayouts(null);
   }
@@ -94,6 +112,7 @@ export default function ExportShareCardButton({ activity }: { activity: Activity
       {layouts && (
         <ExportPreviewModal
           images={layouts}
+          totalCount={SHARE_CARD_LAYOUTS.length}
           canShare={canShare}
           onCancel={closePreview}
           onDownload={confirmDownload}

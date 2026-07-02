@@ -10,12 +10,15 @@ export interface PreviewImage {
 
 export default function ExportPreviewModal({
   images,
+  totalCount,
   canShare,
   onCancel,
   onDownload,
   onShare,
 }: {
   images: PreviewImage[];
+  /** Total layouts expected — when images.length is still below this, more are rendering. */
+  totalCount?: number;
   canShare: boolean;
   onCancel: () => void;
   onDownload: (index: number) => void;
@@ -105,7 +108,11 @@ export default function ExportPreviewModal({
         )}
 
         <p className="text-[11px] text-text-muted text-center mb-3">
-          {images.length > 1 ? "Swipe or use the arrows to try another layout. " : ""}
+          {totalCount != null && images.length < totalCount
+            ? `Rendering more layouts… (${images.length}/${totalCount}) `
+            : images.length > 1
+              ? "Swipe or use the arrows to try another layout. "
+              : ""}
           Checkered areas are transparent in the exported PNG.
         </p>
 
